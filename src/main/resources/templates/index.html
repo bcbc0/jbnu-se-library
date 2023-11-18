@@ -1,0 +1,1339 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <!-- meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!--font-family-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- title of site -->
+    <title>SW Library</title>
+
+    <!-- For favicon png -->
+    <link rel="shortcut icon" type="image/icon" href="/logo/favicon.png"/>
+
+    <!--font-awesome.min.css-->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <!--linear icon css-->
+    <link rel="stylesheet" href="/css/linearicons.css">
+
+    <!--animate.css-->
+    <link rel="stylesheet" href="/css/animate.css">
+
+    <!--flaticon.css-->
+    <link rel="stylesheet" href="/css/flaticon.css">
+
+    <!--slick.css-->
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="/css/slick-theme.css">
+
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="/css/bootsnav.css">
+
+    <!--style.css-->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!--responsive.css-->
+    <link rel="stylesheet" href="/css/responsive.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!--header-top start -->
+<header id="header-top" class="header-top">
+    <ul>
+        <li>
+            <div class="header-top-left">
+                <ul>
+                    <li class="select-opt">
+                        <select name="language" id="language"> <!--뺴거나 다른 거로 수정 -->
+                            <option value="default">EN</option>
+                            <option value="Korean">KR</option>
+                        </select>
+                    </li>
+                    <li class="select-opt">
+                        <a href="#"><span class="lnr lnr-magnifier"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="head-responsive-right pull-right">
+            <div class="header-top-right">
+                <ul>
+                    <li class="header-top-contact">
+                        <a href="https://dl.jbnu.ac.kr/">전북대학교</a> <!--홈페이지 주소-->
+                    </li>
+                    <li class="header-top-contact">
+                        <a href="login.html">sign in</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+</header><!--/.header-top-->
+<!--header-top end -->
+
+<!-- top-area Start -->
+<section class="top-area">
+    <div class="header-area">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy" data-minus-value-desktop="70"
+             data-minus-value-mobile="55" data-speed="1000">
+
+            <div class="container">
+
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">SW<span>Library</span></a>
+
+                </div><!--/.navbar-header-->
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class=" scroll active"><a href="#home">home</a></li>
+                        <li class="scroll"><a href="#books">books</a></li>
+                        <li class="scroll"><a href="#reservation">reservation</a></li>
+                        <li class="scroll"><a href="#contact">notice</a></li>
+                        <li class="scroll"><a href="#works">donation</a></li>
+                        <li class="scroll"><a href="#blog">my library</a></li>
+                    </ul><!--/.nav -->
+                </div><!-- /.navbar-collapse -->
+            </div><!--/.container-->
+        </nav><!--/nav-->
+        <!-- End Navigation -->
+    </div><!--/.header-area-->
+    <div class="clearfix"></div>
+
+</section><!-- /.top-area-->
+<!-- top-area End -->
+
+<!--welcome-hero start -->
+<section id="home" class="welcome-hero">
+    <div class="container">
+        <div class="welcome-hero-txt">
+            <h2>전북대학교 소프트웨어공학과 <br> 도서관 </h2>
+            <p>
+                뭐 검색하셈 ㅇㅇ
+            </p>
+        </div>
+        <div class="welcome-hero-serch-box">
+            <div class="welcome-hero-form">
+                <div class="single-welcome-hero-form">
+                    <h3>검색어</h3>
+                    <form action="index.html">
+                        <input type="text" placeholder="Ex: 디지털공학"/>
+                    </form>
+                </div>
+            </div>
+            <div class="welcome-hero-serch">
+                <button class="welcome-hero-btn" onclick="window.location.href='#'">
+                    search <i data-feather="search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</section><!--/.welcome-hero-->
+<!--welcome-hero end -->
+
+<!--list-topics start -->
+<section id="list-topics" class="list-topics">
+    <div class="container">
+        <div class="list-topics-content">
+            <ul>
+                <li>
+                    <div class="single-list-topics-content">
+                        <div class="single-list-topics-icon">
+                            <i class="flaticon-travel"></i>
+                        </div>
+                        <h2><a href="#">또 필요한 기능</a></h2>
+                        <p>설명글, 빼도됨</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="single-list-topics-content">
+                        <div class="single-list-topics-icon">
+                            <i class="flaticon-building"></i>
+                        </div>
+                        <h2><a href="#">또 필요한 기능</a></h2>
+                        <p>설명글, 빼도됨</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="single-list-topics-content">
+                        <div class="single-list-topics-icon">
+                            <i class="flaticon-pills"></i>
+                        </div>
+                        <h2><a href="#">대출/예약 현황</a></h2>
+                        <p>설명글, 빼도됨</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div><!--/.container-->
+
+</section><!--/.list-topics-->
+<!--list-topics end-->
+
+<!--books start -->
+
+<section id="books" class="books">
+    <div class="contents3">
+        <div class="bookContent">
+            <h2>BOOK LIST</h2>
+            <ul class="tabList">
+                <li class="on">
+                    <a href="#books" title='인기도서' class="tab">인기도서 <span>POPULARITY</span> </a>
+                    <a href="/digicol/list/190" title='인기도서' class="bookMore2">더보기</a>
+                    <div class="bookListW">
+                        <div class="bookList bookListTab">
+
+
+                            <ul>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965714" title='이런 삶이 꼰대라면 나는 그냥 꼰대할래요'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="digicolList_190_1"
+                                                 alt='이런 삶이 꼰대라면 나는 그냥 꼰대할래요'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">이런 삶이 꼰대라면 나는 그냥 꼰대할래요</span>
+                                                <span class="author">임현서</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">이런 삶이 꼰대라면 나는 그냥 꼰대할래요</span>
+                                            <span class="author">임현서</span>
+                                        </div>
+                                        <script>callThumbnail('#digicolList_190_1', '9791192579863', 'CAT', '000000965714');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965626" title='시대예보 : 핵개인의 시대'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="digicolList_190_2" alt='시대예보 : 핵개인의 시대'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">시대예보 : 핵개인의 시대</span>
+                                                <span class="author">송길영</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">시대예보 : 핵개인의 시대</span>
+                                            <span class="author">송길영</span>
+                                        </div>
+                                        <script>callThumbnail('#digicolList_190_2', '9791170610359', 'CAT', '000000965626');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965629"
+                                       title='마흔에 읽는 쇼펜하우어 : 마음의 위기를 다스리는 철학 수업'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="digicolList_190_3"
+                                                 alt='마흔에 읽는 쇼펜하우어 : 마음의 위기를 다스리는 철학 수업'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">마흔에 읽는 쇼펜하우어 : 마음의 위기를 다스리는 철학 수업</span>
+                                                <span class="author">강용수</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">마흔에 읽는 쇼펜하우어 : 마음의 위기를 다스리는 철학 수업</span>
+                                            <span class="author">강용수</span>
+                                        </div>
+                                        <script>callThumbnail('#digicolList_190_3', '9791192300818', 'CAT', '000000965629');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965505"
+                                       title='(펼치는 순간 단숨에 6,000년 역사가 읽히는) 요즘 어른을 위한 최소한의 세계사'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="digicolList_190_4"
+                                                 alt='(펼치는 순간 단숨에 6,000년 역사가 읽히는) 요즘 어른을 위한 최소한의 세계사'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">(펼치는 순간 단숨에 6,000년 역사가 읽히는) 요즘 어른을 위한 최소한의 세계사</span>
+                                                <span class="author">임소미</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">(펼치는 순간 단숨에 6,000년 역사가 읽히는) 요즘 어른을 위한 최소한의 세계사</span>
+                                            <span class="author">임소미</span>
+                                        </div>
+                                        <script>callThumbnail('#digicolList_190_4', '9791193128428', 'CAT', '000000965505');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965494"
+                                       title='이 아이는 자라서 이렇게 됩니다 : 아깽이에서 성묘까지 40마리 고양이의 폭풍성장기'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="digicolList_190_5"
+                                                 alt='이 아이는 자라서 이렇게 됩니다 : 아깽이에서 성묘까지 40마리 고양이의 폭풍성장기'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">이 아이는 자라서 이렇게 됩니다 : 아깽이에서 성묘까지 40마리 고양이의 폭풍성장기</span>
+                                                <span class="author">이용한</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">이 아이는 자라서 이렇게 됩니다 : 아깽이에서 성묘까지 40마리 고양이의 폭풍성장기</span>
+                                            <span class="author">이용한</span>
+                                        </div>
+                                        <script>callThumbnail('#digicolList_190_5', '9788954695831', 'CAT', '000000965494');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965558" title='바깥 일기'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="digicolList_190_6" alt='바깥 일기'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">바깥 일기</span>
+                                                <span class="author">Ernaux, Annie</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">바깥 일기</span>
+                                            <span class="author">Ernaux, Annie</span>
+                                        </div>
+                                        <script>callThumbnail('#digicolList_190_6', '9788932923550', 'CAT', '000000965558');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965612"
+                                       title='머니 트렌드 2024 : 57가지 키워드로 전망하는 대한민국 돈의 흐름'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="digicolList_190_7"
+                                                 alt='머니 트렌드 2024 : 57가지 키워드로 전망하는 대한민국 돈의 흐름'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">머니 트렌드 2024 : 57가지 키워드로 전망하는 대한민국 돈의 흐름</span>
+                                                <span class="author">김도윤</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">머니 트렌드 2024 : 57가지 키워드로 전망하는 대한민국 돈의 흐름</span>
+                                            <span class="author">김도윤</span>
+                                        </div>
+                                        <script>callThumbnail('#digicolList_190_7', '9791191891416', 'CAT', '000000965612');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965560" title='단 한 사람 : 최진영 장편소설'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="digicolList_190_8"
+                                                 alt='단 한 사람 : 최진영 장편소설'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">단 한 사람 : 최진영 장편소설</span>
+                                                <span class="author">최진영</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">단 한 사람 : 최진영 장편소설</span>
+                                            <span class="author">최진영</span>
+                                        </div>
+                                        <script>callThumbnail('#digicolList_190_8', '9791160405750', 'CAT', '000000965560');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965559" title='나만 그런 게 아니었어'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="digicolList_190_9" alt='나만 그런 게 아니었어'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">나만 그런 게 아니었어</span>
+                                                <span class="author">이소담</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">나만 그런 게 아니었어</span>
+                                            <span class="author">이소담</span>
+                                        </div>
+                                        <script>callThumbnail('#digicolList_190_9', '9788934940982', 'CAT', '000000965559');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965055" title='더 컨트롤러 : 누가 내 선택을 조종하는가?'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="digicolList_190_10"
+                                                 alt='더 컨트롤러 : 누가 내 선택을 조종하는가?'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">더 컨트롤러 : 누가 내 선택을 조종하는가?</span>
+                                                <span class="author">김민식</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">더 컨트롤러 : 누가 내 선택을 조종하는가?</span>
+                                            <span class="author">김민식</span>
+                                        </div>
+                                        <script>callThumbnail('#digicolList_190_10', '9788950927394', 'CAT', '000000965055');</script>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+
+                        </div>
+                        <a href="#" class="prev" title='이전'>이전</a>
+                        <a href="#" class="next" title='다음'>다음</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#books" title='신착도서' class="tab">신착도서 <span>NEW ARRIVAL</span></a>
+                    <a href="/newarrival" title='신착도서 더보기' class="bookMore2">더보기</a>
+                    <div class="bookListW">
+                        <div class="bookList bookListTab">
+
+
+                            <ul>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965675" title='파견자들 : 김초엽 장편소설'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="newArrivalList1" alt='파견자들 : 김초엽 장편소설'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">파견자들 : 김초엽 장편소설</span>
+                                                <span class="author">김초엽</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">파견자들 : 김초엽 장편소설</span>
+                                            <span class="author">김초엽</span>
+                                        </div>
+                                        <script>callThumbnail('#newArrivalList1', '9791191587524', 'CAT', '000000965675');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965688"
+                                       title='과학드림의 무섭게 빠져드는 과학책 : 읽다 보면 어느새 과학이 쉬워진다!'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="newArrivalList2"
+                                                 alt='과학드림의 무섭게 빠져드는 과학책 : 읽다 보면 어느새 과학이 쉬워진다!'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">과학드림의 무섭게 빠져드는 과학책 : 읽다 보면 어느새 과학이 쉬워진다!</span>
+                                                <span class="author">김정훈</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">과학드림의 무섭게 빠져드는 과학책 : 읽다 보면 어느새 과학이 쉬워진다!</span>
+                                            <span class="author">김정훈</span>
+                                        </div>
+                                        <script>callThumbnail('#newArrivalList2', '9791140706372', 'CAT', '000000965688');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965695" title='(최적합) 이러닝운영관리사 필기'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="newArrivalList3" alt='(최적합) 이러닝운영관리사 필기'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">(최적합) 이러닝운영관리사 필기</span>
+                                                <span class="author">김윤호</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">(최적합) 이러닝운영관리사 필기</span>
+                                            <span class="author">김윤호</span>
+                                        </div>
+                                        <script>callThumbnail('#newArrivalList3', '9788931559453', 'CAT', '000000965695');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965696"
+                                       title='(2023 국가기술자격 첫 시행) 이러닝운영관리사 : 필기: 제1회 대비 출제과목 이론+예상문제'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="newArrivalList4"
+                                                 alt='(2023 국가기술자격 첫 시행) 이러닝운영관리사 : 필기: 제1회 대비 출제과목 이론+예상문제'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">(2023 국가기술자격 첫 시행) 이러닝운영관리사 : 필기: 제1회 대비 출제과목 이론+예상문제</span>
+                                                <span class="author">이준희</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">(2023 국가기술자격 첫 시행) 이러닝운영관리사 : 필기: 제1회 대비 출제과목 이론+예상문제</span>
+                                            <span class="author">이준희</span>
+                                        </div>
+                                        <script>callThumbnail('#newArrivalList4', '9791191870756', 'CAT', '000000965696');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965618" title='완벽한 자유와 부를 만드는 인생투자'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="newArrivalList5"
+                                                 alt='완벽한 자유와 부를 만드는 인생투자'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">완벽한 자유와 부를 만드는 인생투자</span>
+                                                <span class="author">우석</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">완벽한 자유와 부를 만드는 인생투자</span>
+                                            <span class="author">우석</span>
+                                        </div>
+                                        <script>callThumbnail('#newArrivalList5', '9791196851224', 'CAT', '000000965618');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965616" title='바람에게 안부를 묻다 : 이예훈 소설'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="newArrivalList6"
+                                                 alt='바람에게 안부를 묻다 : 이예훈 소설'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">바람에게 안부를 묻다 : 이예훈 소설</span>
+                                                <span class="author">이예훈</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">바람에게 안부를 묻다 : 이예훈 소설</span>
+                                            <span class="author">이예훈</span>
+                                        </div>
+                                        <script>callThumbnail('#newArrivalList6', '9791167012517', 'CAT', '000000965616');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965703" title='유·초 연계교육 바로알기'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="newArrivalList7" alt='유·초 연계교육 바로알기'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">유·초 연계교육 바로알기</span>
+                                                <span class="author">최일선</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">유·초 연계교육 바로알기</span>
+                                            <span class="author">최일선</span>
+                                        </div>
+                                        <script>callThumbnail('#newArrivalList7', '9788942608713', 'CAT', '000000965703');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965622"
+                                       title='생각이 너무 많은 어른들을 위한 심리학 : 후회 없는 삶을 살고 싶은 당신에게 해 주고 싶은 말들'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="newArrivalList8"
+                                                 alt='생각이 너무 많은 어른들을 위한 심리학 : 후회 없는 삶을 살고 싶은 당신에게 해 주고 싶은 말들'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">생각이 너무 많은 어른들을 위한 심리학 : 후회 없는 삶을 살고 싶은 당신에게 해 주고 싶은 말들</span>
+                                                <span class="author">김혜남</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">생각이 너무 많은 어른들을 위한 심리학 : 후회 없는 삶을 살고 싶은 당신에게 해 주고 싶은 말들</span>
+                                            <span class="author">김혜남</span>
+                                        </div>
+                                        <script>callThumbnail('#newArrivalList8', '9791190538602', 'CAT', '000000965622');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965621" title='(속마음 들키지 않고 할 말 다 하는) 심리 대화술'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="newArrivalList9"
+                                                 alt='(속마음 들키지 않고 할 말 다 하는) 심리 대화술'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">(속마음 들키지 않고 할 말 다 하는) 심리 대화술</span>
+                                                <span class="author">정상지개</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">(속마음 들키지 않고 할 말 다 하는) 심리 대화술</span>
+                                            <span class="author">정상지개</span>
+                                        </div>
+                                        <script>callThumbnail('#newArrivalList9', '9791191777369', 'CAT', '000000965621');</script>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/search/detail/CATTOT000000965623"
+                                       title='푸바오, 매일매일 행복해 : 장난꾸러기 푸바오의 일상 포토 에세이'>
+                                        <div class="bookImgW">
+                                            <img src="/images/books/b2.gif" id="newArrivalList10"
+                                                 alt='푸바오, 매일매일 행복해 : 장난꾸러기 푸바오의 일상 포토 에세이'
+                                                 onerror="this.src='/image/ko/local/main/bookNoImg.jpg'">
+                                            <div class="bookCover">
+                                                <span class="bookTitle">푸바오, 매일매일 행복해 : 장난꾸러기 푸바오의 일상 포토 에세이</span>
+                                                <span class="author">강철원</span>
+                                                <span class="bookMore">자세히보기</span>
+                                            </div>
+                                        </div>
+                                        <div class="bookInfo">
+                                            <span class="bookTitle">푸바오, 매일매일 행복해 : 장난꾸러기 푸바오의 일상 포토 에세이</span>
+                                            <span class="author">강철원</span>
+                                        </div>
+                                        <script>callThumbnail('#newArrivalList10', '9791171251704', 'CAT', '000000965623');</script>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <a href="#" class="prev" title='이전'>이전</a>
+                        <a href="#" class="next" title='다음'>다음</a>
+                    </div>
+
+            </ul>
+            <span>Current List</span>
+        </div>
+</section>
+<!--books end -->
+
+<!--reservation start -->
+<section id="reservation" class="reservation">
+    <div class="section-header">
+        <h2>reservation</h2>
+        <p>책 기부하는 곳</p>
+    </div><!--/.section-header-->
+    <div class="reservation-content">
+        <div class="testimonial-carousel">
+            <div class="single-testimonial-box">
+                <div class="testimonial-description">
+                    <div class="testimonial-info">
+                        <div class="testimonial-img">
+                            <img src="/images/clients/c1.png" alt="clients">
+                        </div><!--/.testimonial-img-->
+                        <div class="testimonial-person">
+                            <h2>Tom Leakar</h2>
+                            <h4>london, UK</h4>
+                            <div class="testimonial-person-star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div><!--/.testimonial-person-->
+                    </div><!--/.testimonial-info-->
+                    <div class="testimonial-comment">
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum. Sed ut perspiciatis eaque.
+                        </p>
+                    </div><!--/.testimonial-comment-->
+                </div><!--/.testimonial-description-->
+            </div><!--/.single-testimonial-box-->
+            <div class="single-testimonial-box">
+                <div class="testimonial-description">
+                    <div class="testimonial-info">
+                        <div class="testimonial-img">
+                            <img src="/images/clients/c2.png" alt="clients">
+                        </div><!--/.testimonial-img-->
+                        <div class="testimonial-person">
+                            <h2>monirul islam</h2>
+                            <h4>london, UK</h4>
+                            <div class="testimonial-person-star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div><!--/.testimonial-person-->
+                    </div><!--/.testimonial-info-->
+                    <div class="testimonial-comment">
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum. Sed ut perspiciatis eaque.
+                        </p>
+                    </div><!--/.testimonial-comment-->
+                </div><!--/.testimonial-description-->
+            </div><!--/.single-testimonial-box-->
+            <div class="single-testimonial-box">
+                <div class="testimonial-description">
+                    <div class="testimonial-info">
+                        <div class="testimonial-img">
+                            <img src="/images/clients/c3.png" alt="clients">
+                        </div><!--/.testimonial-img-->
+                        <div class="testimonial-person">
+                            <h2>Shohrab Hossain</h2>
+                            <h4>london, UK</h4>
+                            <div class="testimonial-person-star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div><!--/.testimonial-person-->
+                    </div><!--/.testimonial-info-->
+                    <div class="testimonial-comment">
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum. Sed ut perspiciatis eaque.
+                        </p>
+                    </div><!--/.testimonial-comment-->
+                </div><!--/.testimonial-description-->
+            </div><!--/.single-testimonial-box-->
+            <div class="single-testimonial-box">
+                <div class="testimonial-description">
+                    <div class="testimonial-info">
+                        <div class="testimonial-img">
+                            <img src="/images/clients/c4.png" alt="clients">
+                        </div><!--/.testimonial-img-->
+                        <div class="testimonial-person">
+                            <h2>Tom Leakar</h2>
+                            <h4>london, UK</h4>
+                            <div class="testimonial-person-star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div><!--/.testimonial-person-->
+                    </div><!--/.testimonial-info-->
+                    <div class="testimonial-comment">
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum. Sed ut perspiciatis eaque.
+                        </p>
+                    </div><!--/.testimonial-comment-->
+                </div><!--/.testimonial-description-->
+            </div><!--/.single-testimonial-box-->
+            <div class="single-testimonial-box">
+                <div class="testimonial-description">
+                    <div class="testimonial-info">
+                        <div class="testimonial-img">
+                            <img src="/images/clients/c1.png" alt="clients">
+                        </div><!--/.testimonial-img-->
+                        <div class="testimonial-person">
+                            <h2>Tom Leakar</h2>
+                            <h4>london, UK</h4>
+                            <div class="testimonial-person-star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div><!--/.testimonial-person-->
+                    </div><!--/.testimonial-info-->
+                    <div class="testimonial-comment">
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum. Sed ut perspiciatis eaque.
+                        </p>
+                    </div><!--/.testimonial-comment-->
+                </div><!--/.testimonial-description-->
+            </div><!--/.single-testimonial-box-->
+            <div class="single-testimonial-box">
+                <div class="testimonial-description">
+                    <div class="testimonial-info">
+                        <div class="testimonial-img">
+                            <img src="/images/clients/c2.png" alt="clients">
+                        </div><!--/.testimonial-img-->
+                        <div class="testimonial-person">
+                            <h2>monirul islam</h2>
+                            <h4>london, UK</h4>
+                            <div class="testimonial-person-star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div><!--/.testimonial-person-->
+                    </div><!--/.testimonial-info-->
+                    <div class="testimonial-comment">
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum. Sed ut perspiciatis eaque.
+                        </p>
+                    </div><!--/.testimonial-comment-->
+                </div><!--/.testimonial-description-->
+            </div><!--/.single-testimonial-box-->
+            <div class="single-testimonial-box">
+                <div class="testimonial-description">
+                    <div class="testimonial-info">
+                        <div class="testimonial-img">
+                            <img src="/images/clients/c3.png" alt="clients">
+                        </div><!--/.testimonial-img-->
+                        <div class="testimonial-person">
+                            <h2>Shohrab Hossain</h2>
+                            <h4>london, UK</h4>
+                            <div class="testimonial-person-star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div><!--/.testimonial-person-->
+                    </div><!--/.testimonial-info-->
+                    <div class="testimonial-comment">
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum. Sed ut perspiciatis eaque.
+                        </p>
+                    </div><!--/.testimonial-comment-->
+                </div><!--/.testimonial-description-->
+            </div><!--/.single-testimonial-box-->
+            <div class="single-testimonial-box">
+                <div class="testimonial-description">
+                    <div class="testimonial-info">
+                        <div class="testimonial-img">
+                            <img src="/images/clients/c4.png" alt="clients">
+                        </div><!--/.testimonial-img-->
+                        <div class="testimonial-person">
+                            <h2>Tom Leakar</h2>
+                            <h4>london, UK</h4>
+                            <div class="testimonial-person-star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div><!--/.testimonial-person-->
+                    </div><!--/.testimonial-info-->
+                    <div class="testimonial-comment">
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum. Sed ut perspiciatis eaque.
+                        </p>
+                    </div><!--/.testimonial-comment-->
+                </div><!--/.testimonial-description-->
+            </div><!--/.single-testimonial-box-->
+        </div>
+    </div>
+
+</section><!--/.reservation-->
+<!--reservation end -->
+
+<!--subscription strat -->
+<section id="contact" class="subscription">
+    <div class="notice">
+        <ul>
+            <li class="on">
+                <a href="" title='공지사항'>공지사항</a>
+                <div class="noticeContent">
+                    <ul>
+
+
+                        <li>
+                            <a href="/bbs/content/1_40855?subject_code=1&mId=30401000"
+                               title="김병기 명예교수 강연 참여자 모집(11.20.10시~11.28.17시)">김병기 명예교수 강연 참여자 모집&#40;11.20.10시~11.28.17시&#41;</a>
+                            <span class="noticeDate">
+
+										2023-11-16
+									</span>
+                        </li>
+
+                        <li>
+                            <a href="/bbs/content/1_40854?subject_code=1&mId=30401000"
+                               title="도서관 미소장 자료 타기관 대출 서비스 안내(제2도서관 자료 포함)">도서관 미소장 자료 타기관 대출 서비스 안내&#40;제2도서관 자료 포함&#41;</a>
+                            <span class="noticeDate">
+
+										2023-11-16
+									</span>
+                        </li>
+
+                        <li>
+                            <a href="/bbs/content/1_40852?subject_code=1&mId=30401000" title="대학수학능력시험일 도서관 개관시간 변경안내">대학수학능력시험일
+                                도서관 개관시간 변경안내</a>
+                            <span class="noticeDate">
+
+										2023-11-15
+									</span>
+                        </li>
+
+                        <li>
+                            <a href="/bbs/content/1_40833?subject_code=1&mId=30401000" title="23년도 동절기 난방 공급 계획 알림">23년도
+                                동절기 난방 공급 계획 알림</a>
+                            <span class="noticeDate">
+
+										2023-11-14
+									</span>
+                        </li>
+
+                        <li>
+                            <a href="/bbs/content/1_40813?subject_code=1&mId=30401000"
+                               title="[와이즈인컴퍼니] 온라인 취업역량 강화 교육 안내 (HR & 마케팅 분야)">[와이즈인컴퍼니] 온라인 취업역량 강화 교육 안내 &#40;HR
+                                &amp; 마케팅 분야&#41;</a>
+                            <span class="noticeDate">
+
+										2023-11-10
+									</span>
+                        </li>
+
+                        <li>
+                            <a href="/bbs/content/1_40772?subject_code=1&mId=30401000" title="제2도서관 휴관 안내">제2도서관 휴관
+                                안내</a>
+                            <span class="noticeDate">
+
+										2023-11-06
+									</span>
+                        </li>
+
+
+                    </ul>
+                    <a href="https://dl.jbnu.ac.kr/bbs/list/1?subject_code=1&mId=30401000" class="more"
+                       title='공지사항'>더보기</a>
+                </div>
+            </li>
+            <li>
+                <a href="" title='학술공지'>학술공지</a>
+                <div class="noticeContent">
+                    <ul>
+
+
+                        <li>
+                            <a href="/bbs/content/1_39470?subject_code=2&mId=30402000"
+                               title="De Gruyter eJournal 오픈액세스 출판 비용(APC) 지원">De Gruyter eJournal 오픈액세스 출판 비용&#40;APC&#41;
+                                지원</a>
+                            <span class="noticeDate">
+
+										2023-03-22
+									</span>
+                        </li>
+
+                        <li>
+                            <a href="/bbs/content/1_36390?subject_code=2&mId=30402000"
+                               title="[Cambridge Journal] 오픈 액세스 출판 안내">[Cambridge Journal] 오픈 액세스 출판 안내</a>
+                            <span class="noticeDate">
+
+										2022-03-04
+									</span>
+                        </li>
+
+                        <li>
+                            <a href="/bbs/content/1_40753?subject_code=2&mId=30402000" title="[이벤트] ICPSR 퀴즈 이벤트">[이벤트]
+                                ICPSR 퀴즈 이벤트</a>
+                            <span class="noticeDate">
+
+										2023-10-31
+									</span>
+                        </li>
+
+                        <li>
+                            <a href="/bbs/content/1_40752?subject_code=2&mId=30402000" title="[이벤트]  KSDC DB 퀴즈 이벤트">[이벤트]
+                                KSDC DB 퀴즈 이벤트</a>
+                            <span class="noticeDate">
+
+										2023-10-31
+									</span>
+                        </li>
+
+                        <li>
+                            <a href="/bbs/content/1_40638?subject_code=2&mId=30402000"
+                               title="[이벤트] 2023 ACS Publications Quiz Event!">[이벤트] 2023 ACS Publications Quiz
+                                Event!</a>
+                            <span class="noticeDate">
+
+										2023-10-16
+									</span>
+                        </li>
+
+                        <li>
+                            <a href="/bbs/content/1_40637?subject_code=2&mId=30402000"
+                               title="[이벤트] 2023 KERIS 대학라이선스, JSTOR Archive Collection & Artstor Digital Library Quiz Event!">[이벤트]
+                                2023 KERIS 대학라이선스, JSTOR Archive Collection &amp; Artstor Digital Library Quiz
+                                Event!</a>
+                            <span class="noticeDate">
+
+										2023-10-16
+									</span>
+                        </li>
+
+
+                    </ul>
+                    <a href="notice.html" class="more" title='학술공지'>더보기</a>
+                </div>
+            </li>
+            <li>
+                <a href="" title='분관공지'>분관공지</a>
+                <div class="noticeContent">
+                    <ul>
+
+
+                        <li>
+                            <a href="/bbs/content/20_40092" title="로앤비-기본법 주석서 서비스 종료 안내 (7.1.~)">[법학] 로앤비-기본법 주석서 서비스
+                                종료 안내 &#40;7.1.~&#41;</a>
+                            <span class="noticeDate">
+
+										2023-07-05
+									</span>
+                        </li>
+
+                        <li>
+                            <a href="/bbs/content/20_39450" title="중국법률  CLKD 서비스 일시중지 안내 ">[법학] 중국법률 CLKD 서비스 일시중지
+                                안내 </a>
+                            <span class="noticeDate">
+
+										2023-03-21
+									</span>
+                        </li>
+
+                        <li>
+                            <a href="/bbs/content/20_37146" title="[모바일앱 ]로앤비(LAWnB) 이용안내">[법학] [모바일앱 ]로앤비&#40;LAWnB&#41;
+                                이용안내</a>
+                            <span class="noticeDate">
+
+										2022-05-23
+									</span>
+                        </li>
+
+                        <li>
+                            <a href="/bbs/content/20_36190" title="2022년도 국내·외 인쇄학술지 구독목록(치의학도서관)">[치의학] 2022년도 국내·외
+                                인쇄학술지 구독목록&#40;치의학도서관&#41;</a>
+                            <span class="noticeDate">
+
+										2022-02-09
+									</span>
+                        </li>
+
+                        <li>
+                            <a href="/bbs/content/20_40853" title="도서관 개관시간 변경(대학수학능력시험관련)">[특성화캠퍼스] 도서관 개관시간 변경&#40;대학수학능력시험관련&#41;</a>
+                            <span class="noticeDate">
+
+										2023-11-15
+									</span>
+                        </li>
+
+                        <li>
+                            <a href="/bbs/content/20_40312" title="2023년도 구독학술지 리스트">[치의학] 2023년도 구독학술지 리스트</a>
+                            <span class="noticeDate">
+
+										2023-08-24
+									</span>
+                        </li>
+
+
+                    </ul>
+                    <a href="/bbs/list/20" class="more" title='분관공지'>더보기</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- //공지사항 -->
+
+</section><!--/subscription-->
+<!--subscription end -->
+
+<!--works start -->
+<section id="works" class="works">
+    <div class="container">
+        <div class="section-header">
+            <h2>how it works</h2>
+            <p>Learn More about how our website works</p>
+        </div><!--/.section-header-->
+        <div class="works-content">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-how-works">
+                        <div class="single-how-works-icon">
+                            <i class="flaticon-lightbulb-idea"></i>
+                        </div>
+                        <h2><a href="#">choose <span> what to</span> do</a></h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut
+                            laboremagna aliqua.
+                        </p>
+                        <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
+                            read more
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-how-works">
+                        <div class="single-how-works-icon">
+                            <i class="flaticon-networking"></i>
+                        </div>
+                        <h2><a href="#">find <span> what you want</span></a></h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut
+                            laboremagna aliqua.
+                        </p>
+                        <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
+                            read more
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-how-works">
+                        <div class="single-how-works-icon">
+                            <i class="flaticon-location-on-road"></i>
+                        </div>
+                        <h2><a href="#">books <span> amazing</span> place</a></h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut
+                            laboremagna aliqua.
+                        </p>
+                        <button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
+                            read more
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/.container-->
+
+</section><!--/.works-->
+<!--works end -->
+
+<!-- statistics strat -->
+<section id="statistics" class="statistics">
+    <div class="container">
+        <div class="statistics-counter">
+            <div class="col-md-3 col-sm-6">
+                <div class="single-ststistics-box">
+                    <div class="statistics-content">
+                        <div class="counter">90</div>
+                        <span>K+</span>
+                    </div><!--/.statistics-content-->
+                    <h3>listings</h3>
+                </div><!--/.single-ststistics-box-->
+            </div><!--/.col-->
+            <div class="col-md-3 col-sm-6">
+                <div class="single-ststistics-box">
+                    <div class="statistics-content">
+                        <div class="counter">40</div>
+                        <span>k+</span>
+                    </div><!--/.statistics-content-->
+                    <h3>listing categories</h3>
+                </div><!--/.single-ststistics-box-->
+            </div><!--/.col-->
+            <div class="col-md-3 col-sm-6">
+                <div class="single-ststistics-box">
+                    <div class="statistics-content">
+                        <div class="counter">65</div>
+                        <span>k+</span>
+                    </div><!--/.statistics-content-->
+                    <h3>visitors</h3>
+                </div><!--/.single-ststistics-box-->
+            </div><!--/.col-->
+            <div class="col-md-3 col-sm-6">
+                <div class="single-ststistics-box">
+                    <div class="statistics-content">
+                        <div class="counter">50</div>
+                        <span>k+</span>
+                    </div><!--/.statistics-content-->
+                    <h3>happy clients</h3>
+                </div><!--/.single-ststistics-box-->
+            </div><!--/.col-->
+        </div><!--/.statistics-counter-->
+    </div><!--/.container-->
+
+</section><!--/.counter-->
+<!-- statistics end -->
+
+<!--blog start -->
+<section id="blog" class="blog">
+    <div class="container">
+        <div class="section-header">
+            <h2>news and articles</h2>
+            <p>Always upto date with our latest News and Articles </p>
+        </div><!--/.section-header-->
+        <div class="blog-content">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-blog-item">
+                        <div class="single-blog-item-img">
+                            <img src="/images/blog/b1.jpg" alt="blog image">
+                        </div>
+                        <div class="single-blog-item-txt">
+                            <h2><a href="#">How to find your Desired Place more quickly</a></h2>
+                            <h4>posted <span>by</span> <a href="#">admin</a> march 2018</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore
+                                incididunt ut labore et dolore magna.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-blog-item">
+                        <div class="single-blog-item-img">
+                            <img src="/images/blog/b2.jpg" alt="blog image">
+                        </div>
+                        <div class="single-blog-item-txt">
+                            <h2><a href="#">How to find your Desired Place more quickly</a></h2>
+                            <h4>posted <span>by</span> <a href="#">admin</a> march 2018</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore
+                                incididunt ut labore et dolore magna.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-blog-item">
+                        <div class="single-blog-item-img">
+                            <img src="/images/blog/b3.jpg" alt="blog image">
+                        </div>
+                        <div class="single-blog-item-txt">
+                            <h2><a href="#">How to find your Desired Place more quickly</a></h2>
+                            <h4>posted <span>by</span> <a href="#">admin</a> march 2018</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore
+                                incididunt ut labore et dolore magna.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/.container-->
+
+</section><!--/.blog-->
+<!--blog end -->
+
+<!--footer start-->
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="footer-menu">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">SW<span>Library</span></a>
+                    </div><!--/.navbar-header-->
+                </div>
+                <div class="col-sm-9">
+                    <ul class="footer-menu-item">
+                        <li class="scroll"><a href="#books">books</a></li>
+                        <li class="scroll"><a href="#reservation">reservation</a></li>
+                        <li class="scroll"><a href="#contact">notice</a></li>
+                        <li class="scroll"><a href="#works">donation</a></li>
+                        <li class="scroll"><a href="#blog">my library</a></li>
+                        <li class=" scroll"><a href="#contact">my account</a></li>
+                    </ul><!--/.nav -->
+                </div>
+            </div>
+        </div>
+        <div class="hm-footer-copyright">
+            <div class="row">
+                <div class="col-sm-5">
+                    <p>
+                        &copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
+                    </p><!--/p-->
+                </div>
+                <div class="col-sm-7">
+                    <div class="footer-social">
+                        <span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div><!--/.hm-footer-copyright-->
+    </div><!--/.container-->
+
+    <div id="scroll-Top">
+        <div class="return-to-top">
+            <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title=""
+               data-original-title="Back to Top" aria-hidden="true"></i>
+        </div>
+
+    </div><!--/.scroll-Top-->
+
+</footer><!--/.footer-->
+<!--footer end-->
+
+<!-- Include all js compiled plugins (below), or include individual files as needed -->
+
+<script src="/js/jquery.js"></script>
+
+<!--modernizr.min.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+<!--bootstrap.min.js-->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- bootsnav js -->
+<script src="/js/bootsnav.js"></script>
+
+<!--feather.min.js-->
+<script src="/js/feather.min.js"></script>
+
+<!-- counter js -->
+<script src="/js/jquery.counterup.min.js"></script>
+<script src="/js/waypoints.min.js"></script>
+
+<!--slick.min.js-->
+<script src="/js/slick.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+<!--Custom JS-->
+<script src="/js/custom.js"></script>
+
+</body>
+
+</html>
