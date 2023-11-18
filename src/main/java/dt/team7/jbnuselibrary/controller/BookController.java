@@ -1,6 +1,6 @@
 package dt.team7.jbnuselibrary.controller;
 import dt.team7.jbnuselibrary.entity.Book;
-import dt.team7.jbnuselibrary.service.BookService;
+import dt.team7.jbnuselibrary.service.BookServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,10 +12,10 @@ import java.util.List;
 
 @Controller
 public class BookController {
-    private final BookService bookService;
+    private final BookServiceImpl bookService;
 
     @Autowired
-    public BookController(BookService bookService) {
+    public BookController(BookServiceImpl bookService) {
         this.bookService = bookService;
     }
     @GetMapping("/books")
