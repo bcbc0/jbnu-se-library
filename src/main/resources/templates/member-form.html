@@ -1,0 +1,18 @@
+<!-- src/main/resources/templates/member-form.html -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Member</title>
+</head>
+<body>
+<h2>Add New Member</h2>
+<form action="/members/add" method="post" th:object="${member}">
+  <label>Student Id: <input type="text" th:field="*{studentId}"/></label><br/>
+  <label>Name: <input type="text" th:field="*{name}"/></label><br/>
+  <input type="submit" value="Add Member"/>
+</form>
+<a href="/members/list">Back to Member List</a>
+</body>
+</html>
