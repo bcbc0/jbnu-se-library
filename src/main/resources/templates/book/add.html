@@ -1,0 +1,17 @@
+<!-- src/main/resources/templates/book/add.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Book</title>
+</head>
+<body>
+<h2>Add Book</h2>
+<form action="/books/add" method="post" th:object="${Book}">
+  <label>Title: <input type="text" th:field="*{title}" required></label><br>
+  <label>Author: <input type="text" th:field="*{author}" required></label><br>
+  <button type="submit">Add</button>
+</form>
+<a href="/books">Back to Book List</a>
+</body>
+</html>
