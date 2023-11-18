@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class BookService implements BookService {
+public class BookServiceImpl implements BookService {
     private final BookRepository bookRepository;
 
     public BookServiceImpl(BookRepository bookRepository) {
@@ -21,6 +21,16 @@ public class BookService implements BookService {
     @Override
     public Book getBookById(Long id) {
         return bookRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public List<Book> getBookByTitle(String title) {
+        return bookRepository.findByTitle(title);
+    }
+
+    @Override
+    public List<Book> getBookByAuthor(String author) {
+        return bookRepository.findByAuthor(author);
     }
 
     @Override
