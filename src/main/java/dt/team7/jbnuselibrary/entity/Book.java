@@ -1,30 +1,34 @@
 package dt.team7.jbnuselibrary.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column
     private String title;
+
+    @Column
     private String author;
-//    private String publisher;
-//    private String isbn;
+
+    @Column
+    private String publisher;
+
+    @Column
+    private String isbn;
+
+    @Column
+    private Long count;
+
+    @Column
+    private Long borrowedCount;
 
     public Book() {
 
     }
-
-//    public Book(String title, String author, String publisher, String isbn) {
-//        this.title = title;
-//        this.author = author;
-//        this.publisher = publisher;
-//        this.isbn = isbn;
-//    }
 
     public Long getId() {
         return id;
@@ -50,19 +54,35 @@ public class Book {
         this.author = author;
     }
 
-//    public String getPublisher() {
-//        return publisher;
-//    }
-//
-//    public void setPublisher(String publisher) {
-//        this.publisher = publisher;
-//    }
-//
-//    public String getIsbn() {
-//        return isbn;
-//    }
-//
-//    public void setIsbn(String isbn) {
-//        this.isbn = isbn;
-//    }
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public Long getCount() {
+        return count;
+    }
+
+    public void setCount(Long count) {
+        this.count = count;
+    }
+
+    public Long getBorrowedCount() {
+        return borrowedCount;
+    }
+
+    public void setBorrowedCount(Long borrowedCount) {
+        this.borrowedCount = borrowedCount;
+    }
 }
