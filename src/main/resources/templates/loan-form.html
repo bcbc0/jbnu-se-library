@@ -1,0 +1,27 @@
+<!-- src/main/resources/templates/loan-form.html -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Loan</title>
+</head>
+<body>
+<h2>Add New Loan</h2>
+<form action="/loans/add" method="post" th:object="${loan}">
+    <label>Member:
+        <select th:field="*{member}">
+            <option th:each="member : ${members}" th:value="${member}" th:text="${member.name}"></option>
+        </select>
+    </label><br/>
+    <label>Books:
+        <select th:field="*{books}" multiple="multiple">
+            <option th:each="book : ${books}" th:value="${book}" th:text="${book.title}"></option>
+        </select>
+    </label><br/>
+    <!-- 추가적인 대출 정보 입력 폼 추가 -->
+    <input type="submit" value="Add Loan"/>
+</form>
+<a href="/loans/list">Back to Loan List</a>
+</body>
+</html>
