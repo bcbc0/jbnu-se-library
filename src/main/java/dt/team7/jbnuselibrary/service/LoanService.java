@@ -9,5 +9,7 @@ public interface LoanService {
 
     Loan getLoanById(Long id);
 
-    void saveLoan(Loan loan);
+    void loanBook(Loan loan);
+
+    void returnBook(Long bookId);
 }

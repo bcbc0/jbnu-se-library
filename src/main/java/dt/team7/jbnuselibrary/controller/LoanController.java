@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-@RequestMapping("/loans")
+@RequestMapping("/loan")
 public class LoanController {
 
     private final LoanService loanService;
@@ -51,7 +51,7 @@ public class LoanController {
     
     @PostMapping("/add")
     public String addLoan(@ModelAttribute("loan") Loan loan) {
-        loanService.saveLoan(loan);
+        loanService.loanBook(loan);
         return "redirect:/loans/list";
     }
 
