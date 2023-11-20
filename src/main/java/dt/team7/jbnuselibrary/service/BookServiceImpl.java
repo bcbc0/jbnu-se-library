@@ -34,6 +34,11 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public List<Book> getBookByLecture(String lecture) {
+        return bookRepository.findByLecture(lecture);
+    }
+
+    @Override
     public void addBook(Book book) {
         bookRepository.save(book);
     }
