@@ -1,10 +1,16 @@
 package dt.team7.jbnuselibrary.entity;
 
+import lombok.*;
+
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,4 +48,12 @@ public class Book {
 
     @Column
     private Long borrowedCount;
+
+    public void increaseBorrowedCount() {
+        this.borrowedCount++;
+    }
+
+    public void decreaseBorrowedCount() {
+        this.borrowedCount--;
+    }
 }
