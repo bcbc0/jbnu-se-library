@@ -1,52 +1,76 @@
 package dt.team7.jbnuselibrary.service;
 
-import dt.team7.jbnuselibrary.entity.Loan;
 import dt.team7.jbnuselibrary.entity.Book;
+import dt.team7.jbnuselibrary.entity.LoanHistory;
+import dt.team7.jbnuselibrary.entity.Member;
 import dt.team7.jbnuselibrary.repository.BookRepository;
 import dt.team7.jbnuselibrary.repository.LoanRepository;
+import dt.team7.jbnuselibrary.repository.MemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
-import java.util.stream.Collectors;
 
 
 @Service
+@RequiredArgsConstructor
 public class LoanServiceImpl implements LoanService {
 
-    private final LoanRepository loanRepository;
+    private final MemberRepository memberRepository;
     private final BookRepository bookRepository;
-
-    public LoanServiceImpl(LoanRepository loanRepository, BookRepository bookRepository) {
-        this.loanRepository = loanRepository;
-        this.bookRepository = bookRepository;
-    }
+    private final LoanRepository loanRepository;
 
     @Override
-    public List<Loan> getAllLoans() {
+    public List<LoanHistory> getAllLoanHistories() {
         return loanRepository.findAll();
     }
 
     @Override
-    public Loan getLoanById(Long id) {
+    public LoanHistory getLoanHistoriesById(Long id) {
         return loanRepository.findById(id).orElse(null);
     }
 
     @Override
-    public void loanBook(Loan loan) {
-        loanRepository.save(loan);
+    public List<LoanHistory> getLoanHistoriesByMemberIdAndBookId(Long memberId, Long bookId) {
+        Member member = memberRepository.findById(memberId).orElse(null);
+        Book book = bookRepository.findById(bookId).orElse(null);
+
+        return loanRepository.findByMemberAndBook(member, book);
     }
 
     @Override
-    public void returnBook(Long bookId) {
+    @Transactional
+    public Boolean borrowBook(Long memberId, Long bookId) {
+        Member member = memberRepository.findById(memberId).orElse(null);
         Book book = bookRepository.findById(bookId).orElse(null);
-        List<Loan> loans = loanRepository.findByBook(book)
-                .stream()
-                .filter(Loan::isReturned)
-                .collect(Collectors.toList());
 
-        for (Loan loan : loans) {
-            loan.setReturned(true);
-            loanRepository.save(loan);
+        assert book != null;
+        if (book.getCount() <= book.getBorrowedCount()) {
+            return false;
         }
+
+        book.increaseBorrowedCount();
+
+        LoanHistory loanHistory = LoanHistory.builder()
+                .member(member)
+                .book(book)
+                .borrowDate(LocalDateTime.now())
+                .build();
+
+        loanRepository.save(loanHistory);
+
+        return true;
+    }
+
+    @Override
+    @Transactional
+    public void returnBook(Long memberId, Long bookId) {
+        Member member = memberRepository.findById(memberId).orElse(null);
+        Book book = bookRepository.findById(bookId).orElse(null);
+
+        assert book != null;
+        book.decreaseBorrowedCount();
     }
 }

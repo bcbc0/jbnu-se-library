@@ -8,8 +8,15 @@
 <body>
 <h2>Add Book</h2>
 <form action="/books/add" method="post" th:object="${Book}">
-  <label>Title: <input type="text" th:field="*{title}" required></label><br>
-  <label>Author: <input type="text" th:field="*{author}" required></label><br>
+  <label>title: <input type="text" th:field="*{title}" required></label><br>
+  <label>link: <input type="text" th:field="*{link}" required></label><br>
+  <label>image: <input type="text" th:field="*{image}" required></label><br>
+  <label>author: <input type="text" th:field="*{author}" required></label><br>
+  <label>publisher: <input type="text" th:field="*{publisher}" required></label><br>
+  <label>isbn: <input type="text" th:field="*{isbn}" required></label><br>
+  <label>lecture: <input type="text" th:field="*{lecture}" required></label><br>
+  <label>count: <input type="text" th:field="*{count}" required></label><br>
+  <label>borrowedCount: <input type="text" th:field="*{borrowedCount}" required></label><br>
   <button type="submit">Add</button>
 </form>
 <a href="/books">Back to Book List</a>

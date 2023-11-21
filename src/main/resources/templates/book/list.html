@@ -10,16 +10,30 @@
 <table border="1">
     <thead>
     <tr>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Author</th>
+        <th>getId</th>
+        <th>getTitle</th>
+        <th>getLink</th>
+        <th>getImage</th>
+        <th>getAuthor</th>
+        <th>getPublisher</th>
+        <th>getIsbn</th>
+        <th>getLecture</th>
+        <th>getCount</th>
+        <th>getBorrowedCount</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="book : ${books}">
-        <td th:text="${book.id}"></td>
-        <td th:text="${book.title}"></td>
-        <td th:text="${book.author}"></td>
+        <td th:text="${book.getId()}"></td>
+        <td th:text="${book.getTitle()}"></td>
+        <td th:text="${book.getLink()}"></td>
+        <td th:text="${book.getImage()}"></td>
+        <td th:text="${book.getAuthor()}"></td>
+        <td th:text="${book.getPublisher()}"></td>
+        <td th:text="${book.getIsbn()}"></td>
+        <td th:text="${book.getLecture()}"></td>
+        <td th:text="${book.getCount()}"></td>
+        <td th:text="${book.getBorrowedCount()}"></td>
     </tr>
     </tbody>
 </table>
