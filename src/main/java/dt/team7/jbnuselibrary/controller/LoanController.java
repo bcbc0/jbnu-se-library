@@ -1,58 +1,39 @@
 package dt.team7.jbnuselibrary.controller;
 
-import dt.team7.jbnuselibrary.entity.Book;
-import dt.team7.jbnuselibrary.entity.Loan;
-import dt.team7.jbnuselibrary.entity.Member;
 import dt.team7.jbnuselibrary.service.BookService;
 import dt.team7.jbnuselibrary.service.LoanService;
 import dt.team7.jbnuselibrary.service.MemberService;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/loan")
+@RequiredArgsConstructor
 public class LoanController {
 
     private final LoanService loanService;
-    private final MemberService memberService;
-    private final BookService bookService;
 
-    public LoanController(LoanService loanService, MemberService memberService, BookService bookService) {
-        this.loanService = loanService;
-        this.memberService = memberService;
-        this.bookService = bookService;
+    @PostMapping("/borrow")
+    public void borrowBook(
+            @RequestParam Long memberId,
+            @RequestParam Long bookId
+    ) {
+        System.out.println("memberId = " + memberId);
+        System.out.println("bookId = " + bookId);
+        if (!loanService.borrowBook(memberId, bookId)) {
+            return;
+        }
+
     }
 
-    @GetMapping("/list")
-    public String listLoans(Model model) {
-        List<Loan> loans = loanService.getAllLoans();
-        model.addAttribute("loans", loans);
-        return "loan-list";
+    @PostMapping("/return")
+    public void returnBook(
+            @RequestParam Long memberId,
+            @RequestParam Long bookId
+    ) {
+        loanService.returnBook(memberId, bookId);
     }
 
-    @GetMapping("/add")
-    public String showAddForm(Model model) {
-        List<Member> members = memberService.getAllMembers();
-        List<Book> books = bookService.getAllBooks();
-
-        model.addAttribute("loan", new Loan());
-        model.addAttribute("members", members);
-        model.addAttribute("books", books);
-
-        return "loan-form";
-    }
-
-    
-    @PostMapping("/add")
-    public String addLoan(@ModelAttribute("loan") Loan loan) {
-        loanService.loanBook(loan);
-        return "redirect:/loans/list";
-    }
 
 }

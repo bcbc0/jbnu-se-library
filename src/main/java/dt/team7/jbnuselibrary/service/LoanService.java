@@ -1,15 +1,17 @@
 package dt.team7.jbnuselibrary.service;
 
-import dt.team7.jbnuselibrary.entity.Loan;
+import dt.team7.jbnuselibrary.entity.LoanHistory;
 
 import java.util.List;
 
 public interface LoanService {
-    List<Loan> getAllLoans();
+    List<LoanHistory> getAllLoanHistories();
 
-    Loan getLoanById(Long id);
+    LoanHistory getLoanHistoriesById(Long id);
 
-    void loanBook(Loan loan);
+    List<LoanHistory> getLoanHistoriesByMemberIdAndBookId(Long memberId, Long bookId);
 
-    void returnBook(Long bookId);
+    Boolean borrowBook(Long memberId, Long bookId);
+
+    void returnBook(Long memberId, Long bookId);
 }
