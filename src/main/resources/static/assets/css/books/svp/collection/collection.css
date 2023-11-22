@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.collectionInfo {overflow:hidden;padding:20px;margin-top:40px;background:#fff;border:1px solid #dbdbdb}
+.collectionInfo .book {float:left;margin-right:30px}
+.collectionInfo img {width:95px;height:137px;border:1px solid #dbdbdb;vertical-align:top}
+.collectionInfo .info {margin-bottom:12px;color:#292929;line-height:2}
+.collectionInfo .button a {margin-bottom:3px;background-color: #a7265c;border:none;color:#fff;}
+
+.collectionItem {padding-top:28px}
+.collectionItem ul {overflow:hidden;}
+.collectionItem li {float:left;width:50%;margin-bottom:14px;line-height:1.4}
+.collectionItem li a {display:inline-block;padding-left:15px;margin-left:20px;background:url(../../../../image/ko/solution/common/ico/bulCollectionItem.png) no-repeat 0 6px}
+.collectionItem li span {font-size:12px}
+
+.collectionItem02 li {width:100%}
+
+@media screen and (min-width:0px) and (max-width:767px){
+.collectionInfo {margin-top:0}
+.collectionItem li{float:none;width:auto}
+
+.dataSearch {width:100% !important;height:auto;margin:30px 0}
+.dataSearch form {position:relative;display:block;width:100%}
+.dataSearch fieldset {display:block;float:none;width:100%}
+.dataSearch .selectBox1 {width:100%;margin-bottom:10px}
+.dataSearch .keyword {display:block;width:90%;padding:9px 0 8px 0;text-indent:5px}
+.dataSearch .searchBtn {position:absolute;right:0;bottom:0}
+
+}

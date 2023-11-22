@@ -24,7 +24,6 @@ public class BookController {
         List<Book> books = bookService.getAllBooks();
         books.sort(Comparator.comparing(Book::getTitle));
 
-        model.addAttribute("type", "전체");
         model.addAttribute("books", books);
         return "book/list";
     }
@@ -50,7 +49,6 @@ public class BookController {
         List<Book> books = bookService.getBookByLecture(lecture);
         books.sort(Comparator.comparing(Book::getTitle));
 
-        model.addAttribute("type", "강의");
         model.addAttribute("books", books);
         return "book/list";
     }

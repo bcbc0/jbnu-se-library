@@ -1,42 +1,909 @@
-<!-- src/main/resources/templates/book/list.html -->
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Book List</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SE Library</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <link rel="shortcut icon" href="/assets/logo/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/assets/css/books/standard/common.css">
+    <link rel="stylesheet" href="/assets/css/books/jquery.mThumbnailScroller.css">
+    <!-- 폰트 에러나서 일단 뺌
+        <link rel="stylesheet" href="/assets/css/books/sub.css">
+        <script src="/assets/js/books/script/jquery-1.8.3.min.js"></script>
+    -->
+
+    <!--font-awesome.min.css-->
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+
+    <!--linear icon css-->
+    <link rel="stylesheet" href="/assets/css/linearicons.css">
+
+    <!--animate.css-->
+    <link rel="stylesheet" href="/assets/css/animate.css">
+
+    <!--flaticon.css-->
+    <link rel="stylesheet" href="/assets/css/flaticon.css">
+
+    <!--slick.css-->
+    <link rel="stylesheet" href="/assets/css/slick.css">
+    <link rel="stylesheet" href="/assets/css/slick-theme.css">
+
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="/assets/css/bootsnav.css">
+
+    <!--style.css-->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!--responsive.css-->
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+
+
+    <script src="/assets/js/books/script/jquery-1.8.3.min.js"></script>
+    <script src="/assets/js/books/script/footable.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/assets/js/books/script/respond.src.js"></script>
+    <script src="/assets/js/books/script/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <script src="/assets/js/books/script/jquery.easing.1.3.js"></script>
+    <script src="/assets/js/books/script/jquery.dotdotdot.js"></script>
+    <script src="/assets/js/books/script/jquery.placeholder.min.js"></script>
+    <script src="/assets/js/books/script/jquery.mThumbnailScroller.js"></script>
+    <script src="/assets/js/books/script/sub.js"></script>
+    <script src="/assets/js/books/script/subFunction.js"></script>
+    <script src="/assets/js/books/common/util.js"></script>
+    <!-- ê²ì ì°ê°ë¬¼ ì ë³¸ì ë³´ì ì¶ê°ë¹ê³ ë(íë ct_accession ser_remark:ê²°í¸ë´ì©) -->
+    <!-- ê²°í¸ë´ì©(íë) -->
+
+
+    <script type="text/javascript">
+        //Message
+        var imgPath = "/image/ko/";
+        var noexistSearchDetailDataMsg = "상세정보가 없습니다.";
+        var mediaMsg = "바로가기";
+        var abstractMsg = "초록";
+        var contentsMsg = "메세지가 없습니다";
+        var commentariesMsg = "해제";
+        var urlMsg = "URL";
+        var vodMsg = "VOD";
+        var aodMsg = "AOD";
+        var originalMsg = "원문";
+        var criticismMsg = "비평";
+
+        var numberMsg = "No.";
+        var bookImageMsg = "책 표지";
+        var shelfMsg = "소장처";
+        var bookShelfMsg = "서가";
+        var callNoMsg = "청구기호";
+        var shelfinfoMsg = "소장사항";
+        var loaninfoMsg = "대출정보";
+        var bookstateMsg = "도서상태";
+        var reservationMsg = "예약";
+        var remarkMsg = "비고";
+        var returndateMsg = "반납예정일";
+        var checkinMsg = "권호";
+        var branchLoanMsg = "캠퍼스대출";
+        var loanreqMsg = "Quick 도서대출";
+        var checkBindingMsg = "권호·제본정보 보기";
+        var latestdateMsg = "최근입수호";
+        var missBookMsg = "소재불명도서";
+        var missBookTitleMsg = "소재불명도서";
+        var missBookReportMsg = "신고";
+        var nonBookMsg = "수업용비도서 신청";
+        var deliveryMsg = "장애 이용자 책배달 서비스";
+        var deliveryTitleMsg = "배달 서비스";
+        var printMsg = "인쇄";
+        var smsMsg = "SMS발송";
+        var selectMsg = "선택";
+
+        var bookbindMsg = "제본정보";
+        var detailholdinfoMsg = "권호정보";
+        var noItemsMsg = "결과가 없습니다.";
+        var subscriptionMsg = "구독";
+        var checkinyearMsg = "연도별 권호정보";
+        var yearhelpMsg = "연도를 선택하면 해당연도의 상세 권호정보를 보실 수 있습니다.";
+
+        var checkinMsg = "권호";
+        var pubdateMsg = "발행일";
+        var indateMsg = "입수일";
+        var articleMsg = "기사";
+        var appendixMsg = "부록";
+        var accessionnoMsg = "등록번호";
+        var checkinnameMsg = "권호명";
+        var densenoMsg = "밀집번호";
+        var metsMsg = "매체보기";
+
+        var branchLoanExtMsg = "상호대차";
+        var isUseOpacSearch = "false";
+        var serviceMsg = "서비스";
+        var preserveMsg = "보존서고 대출신청";
+
+        var MSG_ERM_PRODUCED_BY = "제공처";
+        var MSG_ERM_COVERAGE_PERIOD = "원문제공기간";
+        var MSG_ERM_RESCNOTE = "주기";
+
+        var isSeriesReserve = "false";
+        var CONST_CHECKINVIEW_TYPE = "radio";
+        var isUseSerRemark = "false";
+        var serRemarkMsg = "결호내용";
+
+        var isDenseNoDisplay = "false";
+        var isUseMypreserve = "true";
+        var isUseMypreserveDelivery = "Y";
+        var isUseSeriesDelivery = "false";
+
+        var isUseLocCheck = "N";
+
+        var infoServiceMsg = "서비스 이용안내";
+
+        var dbNameMsg = "수록DB명";
+        var offerPeriodMsg = "원문제공기간";
+        var delayPeriodMsg = "원문지연기간";
+        var mediaMsg = "바로가기";
+        var msgCheckinButton = "권호정보";
+        var msgBindingButton = "제본정보";
+
+        var totalMsg = "전체";
+
+        var ecipDetailMsg = "도서상세정보";
+        var ecipPreviewMsg = "책 미리보기";
+
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" href="/assets/css/books/svp/collection/collection.css">
+    <link rel="stylesheet" href="/assets/css/books/svp/recommend/list.css">
+    <script type="text/javascript" src="/assets/js/books/script/jquery.mThumbnailScroller.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/books/standard/list.css">
+    <link rel="stylesheet" href="/assets/css/books/search/brief.css">
+    <link rel="stylesheet" href="/assets/css/books/search/basket.css">
+    <link rel="stylesheet" href="/assets/css/books/search/jquery-ui.css">
+    <link rel="stylesheet" href="/assets/css/books/search/Nwagon.css">
+    <link rel="stylesheet" href="/assets/css/books/toastr/toastr.min.css">
+
+    <script type="text/javascript" src="/assets/js/books/common/ajaxCommon.js"></script>
+    <script type="text/javascript" src="/assets/js/books/search/brief.js"></script>
+    <script type="text/javascript" src="/assets/js/books/script/jquery.dotdotdot.js"></script>
+    <script type="text/javascript">
+        var selectPluginUseYn = 'N';
+    </script>
 </head>
 <body>
-<h2>Book List</h2>
-<table border="1">
-    <thead>
-    <tr>
-        <th>getId</th>
-        <th>getTitle</th>
-        <th>getLink</th>
-        <th>getImage</th>
-        <th>getAuthor</th>
-        <th>getPublisher</th>
-        <th>getIsbn</th>
-        <th>getLecture</th>
-        <th>getCount</th>
-        <th>getBorrowedCount</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="book : ${books}">
-        <td th:text="${book.getId()}"></td>
-        <td th:text="${book.getTitle()}"></td>
-        <td th:text="${book.getLink()}"></td>
-        <td th:text="${book.getImage()}"></td>
-        <td th:text="${book.getAuthor()}"></td>
-        <td th:text="${book.getPublisher()}"></td>
-        <td th:text="${book.getIsbn()}"></td>
-        <td th:text="${book.getLecture()}"></td>
-        <td th:text="${book.getCount()}"></td>
-        <td th:text="${book.getBorrowedCount()}"></td>
-    </tr>
-    </tbody>
-</table>
-<a href="/books/add">Add Book</a>
+
+
+<script>
+    //Message
+    var imgPath = "/image/ko/";
+    var noexistSearchDetailDataMsg = "상세정보가 없습니다.";
+    var mediaMsg = "바로가기";
+    var abstractMsg = "초록";
+    var contentsMsg = "메세지가 없습니다";
+    var commentariesMsg = "해제";
+    var urlMsg = "URL";
+    var vodMsg = "VOD";
+    var aodMsg = "AOD";
+    var originalMsg = "원문";
+    var criticismMsg = "비평";
+
+    var numberMsg = "No.";
+    var bookImageMsg = "책 표지";
+    var shelfMsg = "소장처";
+    var bookShelfMsg = "서가";
+    var callNoMsg = "청구기호";
+    var shelfinfoMsg = "소장사항";
+    var loaninfoMsg = "대출정보";
+    var bookstateMsg = "도서상태";
+    var reservationMsg = "예약";
+    var remarkMsg = "비고";
+    var returndateMsg = "반납예정일";
+    var checkinMsg = "권호";
+    var branchLoanMsg = "캠퍼스대출";
+    var loanreqMsg = "Quick 도서대출";
+    var checkBindingMsg = "권호·제본정보 보기";
+    var latestdateMsg = "최근입수호";
+    var missBookMsg = "소재불명도서";
+    var missBookTitleMsg = "소재불명도서";
+    var missBookReportMsg = "신고";
+    var nonBookMsg = "수업용비도서 신청";
+    var deliveryMsg = "장애 이용자 책배달 서비스";
+    var deliveryTitleMsg = "배달 서비스";
+    var printMsg = "인쇄";
+    var smsMsg = "SMS발송";
+    var selectMsg = "선택";
+
+    var bookbindMsg = "제본정보";
+    var detailholdinfoMsg = "권호정보";
+    var noItemsMsg = "결과가 없습니다.";
+    var subscriptionMsg = "구독";
+    var checkinyearMsg = "연도별 권호정보";
+    var yearhelpMsg = "연도를 선택하면 해당연도의 상세 권호정보를 보실 수 있습니다.";
+
+    var checkinMsg = "권호";
+    var pubdateMsg = "발행일";
+    var indateMsg = "입수일";
+    var articleMsg = "기사";
+    var appendixMsg = "부록";
+    var accessionnoMsg = "등록번호";
+    var checkinnameMsg = "권호명";
+    var densenoMsg = "밀집번호";
+    var metsMsg = "매체보기";
+
+    var branchLoanExtMsg = "상호대차";
+    var isUseOpacSearch = "false";
+    var serviceMsg = "서비스";
+    var preserveMsg = "보존서고 대출신청";
+
+    var MSG_ERM_PRODUCED_BY = "제공처";
+    var MSG_ERM_COVERAGE_PERIOD = "원문제공기간";
+    var MSG_ERM_RESCNOTE = "주기";
+
+    var isSeriesReserve = "false";
+    var CONST_CHECKINVIEW_TYPE = "radio";
+    var isUseSerRemark = "false";
+    var serRemarkMsg = "결호내용";
+
+    var isDenseNoDisplay = "false";
+    var isUseMypreserve = "true";
+    var isUseMypreserveDelivery = "Y";
+    var isUseSeriesDelivery = "false";
+
+    var isUseLocCheck = "N";
+
+    var infoServiceMsg = "서비스 이용안내";
+
+    var dbNameMsg = "수록DB명";
+    var offerPeriodMsg = "원문제공기간";
+    var delayPeriodMsg = "원문지연기간";
+    var mediaMsg = "바로가기";
+    var msgCheckinButton = "권호정보";
+    var msgBindingButton = "제본정보";
+
+    var totalMsg = "전체";
+
+    var ecipDetailMsg = "도서상세정보";
+    var ecipPreviewMsg = "책 미리보기";
+
+    var isUseBookposition = "false";
+    var bookpositionType = "LOCATION";
+
+    var isUseMiniPrintLimit = "N";
+    var holdingCaption = "소장정보 목록";
+    var newWindowMsg = "새창열기";
+
+</script>
+
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!--header-top start -->
+<header id="header-top" class="header-top">
+    <ul>
+        <li>
+            <div class="header-top-left">
+                <ul>
+                    <li class="header-top-contact">
+                        <a href="/">소프트웨어공학과 도서관</a> <!--홈페이지 주소-->
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="head-responsive-right pull-right">
+            <div class="header-top-right">
+                <ul>
+                    <li class="header-top-contact">
+                        <a href="https://www.jbnu.ac.kr/kor/">전북대학교</a> <!--홈페이지 주소-->
+                    </li>
+                    <li class="header-top-contact">
+                        <a href="https://dl.jbnu.ac.kr/">중앙도서관</a> <!--홈페이지 주소-->
+                    </li>
+                    <li class="header-top-contact">
+                        <a href="/login">sign in</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+</header><!--/.header-top-->
+<!--header-top end -->
+
+<!-- top-area Start -->
+<section class="top-area">
+    <div class="header-area">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy" data-minus-value-desktop="70"
+             data-minus-value-mobile="55" data-speed="1000">
+
+            <div class="container">
+
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="/">SE<span>Library</span></a>
+
+                </div><!--/.navbar-header-->
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="button"><a href="/">home</a></li>
+                        <li class="button"><a href="/books/">books</a></li>
+                        <li class="button"><a href="/notice">notice</a></li>
+                        <li class="button"><a href="/donation">donation</a></li>
+                        <li class="button"><a href="/myLibrary">my library</a></li>
+                    </ul><!--/.nav -->
+                </div><!-- /.navbar-collapse -->
+            </div><!--/.container-->
+        </nav><!--/nav-->
+        <!-- End Navigation -->
+    </div><!--/.header-area-->
+    <div class="clearfix"></div>
+
+</section><!-- /.top-area-->
+<!-- top-area End -->
+
+
+<div class="searchBrief">
+
+
+    <div class="dataSearch">
+        <form name="refineSearch" method="get" action="#">
+            <fieldset>
+                <legend>검색항목</legend>
+                <input type="hidden" name="pn" value="1">
+                <input type="hidden" name="isRefine" value="Y">
+                <input type="hidden" name="process" value="SEARCH">
+
+
+                <!-- 간략에 검색제한자 출력 -->
+
+
+                <select id="si1" name="si" title="검색 항목을 선택하는곳" class="searchOpt1">
+                    <option value="TOTAL">전체</option>
+                    <option value="1">서명</option>
+                    <option value="2">저자</option>
+                    <option value="3">출판사</option>
+                    <option value="4">주제어</option>
+                </select>
+
+                <div class="searchW">
+
+                    <span class="keyword"><input type="text" name="q" title="검색어를 입력하세요"></span>
+                    <input type="submit" value="검색" class="searchBtn">
+
+
+                </div>
+            </fieldset>
+        </form>
+
+
+        <div id="relatedKeyword" class="relatedKeyword"></div>
+        <script>
+            var keyword4rk = '';
+        </script>
+        <script src="/assets/js/books/common/recommender/relatedKeywords.js"></script>
+
+
+    </div>
+</div>
+<!-- //dataSearch -->
+
+
+<div class="briefContent">
+
+
+    <div class="briefHeader sort">
+
+        <div class="searchBtns2">
+            <div><input type="checkbox" name="allcheck" onclick="checkedAll(this, 'briefFrm', 'data')" class="checkbox"
+                        title="전체선택" id="selectAll"/><label for="selectAll">전체선택</label></div>
+
+            <a href="javascript:addBasketSelect();"><img src="/assets/images/books/basket.jpg" alt="바구니 담기">바구니 담기</a>
+
+
+            <a href="javascript:insertMylist();" title="새창열기"><img src="/assets/images/books/myLib.jpg" alt="내서재에 담기">내서재에
+                담기</a>
+        </div>
+
+    </div> <!-- //listInfo -->
+</div>
+<form name="briefFrm" method="post" action="/search/brief/service" onsubmit="return checked(this);">
+
+
+    <ul class="resultList resultDetail">
+
+
+        <li th:each="book, bookStats : ${books}" th:id="'item_' + ${book.id}" class="items">
+            <dl>
+                <dt class="title">선택</dt>
+
+                <dd class="dataCheck">
+                    <input type="checkbox" name="data" th:value="${book.id}" th:title="${book.title + ' 선택'}">
+                </dd>
+
+                <dt class="title">No</dt>
+                <dd class="num" th:text="${bookStats.index + 1}"></dd>
+                <dt class="title">표지이미지</dt>
+                <dd class="book">
+                    <a th:href="@{/}">
+                        <img th:id="'bookImg_' + ${book.id}" th:src="${book.image}" width="75" height="103" alt="표지이미지">
+                    </a>
+`
+                    <p class="selectBtn">
+                        <a th:id="'basket_' + ${book.id}" href="/loan/borrow" class="cartBtn " title="대출하기">
+                            대출
+                        </a>
+                    </p>
+                </dd>
+
+
+                <dt class="title">제목</dt>
+                <dd class="info" th:text="${book.title}"></dd>
+
+                <dt class="title">저자</dt>
+                <dd class="info" th:text="${book.author}"></dd>
+
+                <dt class="title">출판사</dt>
+                <dd class="info" th:text="${book.publisher}"></dd>
+
+                <dt class="title">출판일</dt>
+                <dd class="info" th:text="${book.pubDate}"></dd>
+
+                <dt class="title">강의</dt>
+                <dd class="info" th:text="${book.lecture}"></dd>
+
+                <dt class="title">설명</dt>
+                <dd class="info" th:text="${book.description}"></dd>
+
+                <dt class="title">재고</dt>
+                <dd class="info" th:text="'재고: ' + ${book.count}"></dd>
+
+                <dt class="title">대출</dt>
+                <dd class="info" th:text="'대출: ' + ${book.borrowedCount}"></dd>
+
+            </dl>
+        </li>
+
+    </ul>
+</form>
+</div> <!-- //resultInfo -->
+</div>
+</div> <!-- //brief -->
+<form name="frmDigicolPopup" action="#"><input type="hidden" name="data"><input type="hidden" name="digicol_type"
+                                                                                value="0003"></form>
+
+<!--footer start-->
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="footer-menu">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/">SE<span>Library</span></a>
+                    </div><!--/.navbar-header-->
+                </div>
+                <div class="col-sm-9">
+                    <ul class="footer-menu-item">
+                        <li class="button"><a href="/">home</a></li>
+                        <li class="button"><a href="/books/">books</a></li>
+                        <li class="button"><a href="/notice">notice</a></li>
+                        <li class="button"><a href="/donation">donation</a></li>
+                        <li class="button"><a href="/myLibrary">my library</a></li>
+                    </ul><!--/.nav -->
+                </div>
+            </div>
+        </div>
+        <div class="hm-footer-copyright">
+            <div class="row">
+                <div class="col-sm-5">
+                    <p>
+                        &copy;copyright. designed and developed by <a
+                            href="https://software.jbnu.ac.kr/software/index.do">dt.team7</a>
+                    </p><!--/p-->
+                </div>
+                <div class="col-sm-7">
+                    <div class="footer-social">
+                        <span><i class="fa fa-phone"> +82 10 7358 4755</i></span>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div><!--/.hm-footer-copyright-->
+    </div><!--/.container-->
+
+    <div id="scroll-Top">
+        <div class="return-to-top">
+            <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title=""
+               data-original-title="Back to Top" aria-hidden="true"></i>
+        </div>
+
+    </div><!--/.scroll-Top-->
+
+</footer><!--/.footer-->
+<!--footer end-->
+
+
+<script>
+    var IS_USE_OPAC_SEARCH = "false";
+    var MSG_ERROR_NOT_FIND = "";
+    var MSG_VALID_LOGIN = "로그인 후 이용하세요.";
+    var MSG_VALID_SEND_SMS = "발송하시겠습니까?";
+    var MSG_VALID_COMPLETE_SMS = "발송되었습니다.";
+    var SITE_CODE = "AA000000";
+    var TITLE_BASKET = "바구니";
+    var INFO_BASKET_INPUT = "바구니에 담았습니다.";
+    var INFO_BASKET_DEL = "바구니에서 삭제 하였습니다.";
+    var WARN_CHECK_FIELDS = "항목을 체크하세요.";  //항목을 체크하세요.
+
+    var SELECT_HOLDING_MODULE = '';
+    var USE_SERVICE = true;
+
+    var saveBtn = "저장";
+    var mailBtn = "메일";
+    var printBtn = "인쇄";
+    var previewBtn = "미리보기";
+    var endNoteBtn = "EndNote";
+    var refWorksBtn = "RefWorks";
+    var selectBtn = "선택";
+    var imagePath = "/image/ko/";
+    var serverDomain = "http://dl.jbnu.ac.kr";
+    $.global = {
+        resizeMove: null,
+        resizeDraw: null,
+        resizeSelectBox: null
+    };
+
+    var facetYearList = ['2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2007', '2006'];
+
+    var facetYearCount = {};
+    facetYearCount['2022'] = 8;
+    facetYearCount['2021'] = 22;
+    facetYearCount['2020'] = 24;
+    facetYearCount['2019'] = 10;
+    facetYearCount['2018'] = 10;
+    facetYearCount['2017'] = 11;
+    facetYearCount['2016'] = 10;
+    facetYearCount['2015'] = 7;
+    facetYearCount['2014'] = 2;
+    facetYearCount['2013'] = 3;
+    facetYearCount['2012'] = 6;
+    facetYearCount['2011'] = 4;
+    facetYearCount['2010'] = 1;
+    facetYearCount['2009'] = 2;
+    facetYearCount['2007'] = 3;
+    facetYearCount['2006'] = 2;
+
+</script>
+
+
+<script>
+    var isUseMypreserveInfo = "true";
+    var isUseCampusLoanInfo = "true";
+    var isUseMissrepoInfo = "false";
+    var isUseDeliveryInfo = "false";
+    var isUseLoanreqInfo = "false";
+    var isUsePosPrintInfo = "true";
+    var isSendSmsInfo = "false";
+    var isUseBookShelf = "false";
+
+    var isUseLocationMypreserve = "null";
+    var isMyPreserveBookStateChk = "true";
+    var outlinkKyobo = "";
+    var isUseDeliveryMarcType = "Y";
+    var rissOrganLoginUrl = 'http://proxy.jbnu.ac.kr/_Lib_Proxy_Url/http://www.riss.kr/OrganLogin.do?url=';
+    var selectPluginUseYn = 'N';
+
+</script>
+<script src="/assets/js/books/script/jquery.mThumbnailScroller.js"></script>
+
+<script src="/assets/js/books/common/ajaxCommon.js"></script>
+<script src="/assets/js/books/search/brief.js"></script>
+<script src="/assets/js/books/search/briefOpac.js"></script>
+<script src="/assets/js/books/search/media.js"></script>
+<script src="/assets/js/books/search/mylibrary.js"></script>
+<script src="/assets/js/books/common/Checkbox.js"></script>
+<script src="/assets/js/books/common/jquery.bgiframe.js"></script>
+<script src="/assets/js/books/common/toastr.min.js"></script>
+<script src="/assets/js/books/common/jquery-ui.js"></script>
+<script src="/assets/js/books/script/Nwagon.js"></script>
+
+<script src="/assets/js/jquery.js"></script>
+
+<!--modernizr.min.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+<!--bootstrap.min.js-->
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<!-- bootsnav js -->
+<script src="/assets/js/bootsnav.js"></script>
+
+<!--feather.min.js-->
+<script src="/assets/js/feather.min.js"></script>
+
+<!-- counter js -->
+<script src="/assets/js/jquery.counterup.min.js"></script>
+<script src="/assets/js/waypoints.min.js"></script>
+
+<!--slick.min.js-->
+<script src="/assets/js/slick.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+<!--Custom JS-->
+<script src="/assets/js/custom.js"></script>
+
+<script>
+    var winWidth = window.innerWidth || document.documentElement.clientWidth;
+    $(window).load(function () {
+
+        if (facetYearList.length > 0) {
+            var _data = getGraphData();
+            setGraph(_data, true);
+        } else {
+            $(".facet .facetList .pubYear").hide();
+        }
+
+        if (winWidth < 768) {
+            $('.typeList ul').hide();
+        }
+    });
+
+    $(document).ready(function () {
+        callThumbnail('bookImg_CATTOT000000932670', '9791158741365', 'CAT', '000000932670');
+        callThumbnail('bookImg_CATTOT000000932800', '9791162244913', 'CAT', '000000932800');
+        callThumbnail('bookImg_CATTOT000000932953', '9788962624151', 'CAT', '000000932953');
+        callThumbnail('bookImg_CATTOT000000932955', '9791164843640', 'CAT', '000000932955');
+        callThumbnail('bookImg_CATTOT000000932956', '9788901255712', 'CAT', '000000932956');
+        callThumbnail('bookImg_CATTOT000000932957', '9791160023657', 'CAT', '000000932957');
+        callThumbnail('bookImg_CATTOT000000932958', '9788970505237', 'CAT', '000000932958');
+        callThumbnail('bookImg_CATTOT000000932965', '9791158772826', 'CAT', '000000932965');
+        callThumbnail('bookImg_CATTOT000000926321', '9791185272535', 'CAT', '000000926321');
+        callThumbnail('bookImg_CATTOT000000926694', '9791130640235', 'CAT', '000000926694');
+
+        $('.mobileTable').footable({
+            breakpoints: {
+                phone: 1024,
+                tablet: 1024
+            }
+        });
+
+        // 갤러리, 갤러리 상세, 간략 선택-모바일
+        if (winWidth < 768) {
+            $('.typeSelect a').toggle(function () {
+                $(this).parent().next().children().show();
+                $(this).children().eq(1).attr({'src': '/assets/images/books/calTypeClose.png'}, {'alt': '닫기'});
+            }, function () {
+                $(this).parent().next().children().hide();
+                $(this).children().eq(1).attr({'src': '/assets/images/books/calTypeOpen.png'}, {'alt': '열기'});
+            });
+        }
+
+        $(window).resize(function () {
+            winWidth = window.innerWidth || document.documentElement.clientWidth;
+            if (winWidth < 768) {
+                $('.typeList ul').hide();
+                $('.typeSelect a img').eq(1).attr({'src': '/assets/images/books/calTypeOpen.png'}, {'alt': '닫기'});
+                $('.typeSelect a').toggle(function () {
+                    $(this).parent().next().children().show();
+                    $(this).children().eq(1).attr({'src': '/assets/images/books/calTypeClose.png'}, {'alt': '닫기'});
+                }, function () {
+                    $(this).parent().next().children().hide();
+                    $(this).children().eq(1).attr({'src': '/assets/images/books/calTypeOpen.png'}, {'alt': '열기'});
+                });
+            } else {
+                $('.typeList ul').show();
+            }
+        });
+
+
+        // 자료유형 1Depth 클릭 이벤트
+        $(".taxonomy button").bind("click", function () {
+            $(this).parent().toggleClass("open");
+            $(this).parent().find("ul").toggle();
+            return false;
+        });
+
+        // 자료유형 2Depth 클릭 이벤트
+        $(".taxonomy li li a").bind("click", function () {
+            $(this).toggleClass("selected");
+            return false;
+        });
+
+        // 더보기 클릭 이벤트
+        $(".facet .more").each(function () {
+            $(this).parent("dd").find("li").eq(4).nextAll().hide();
+        });
+
+        $(".facet .more button").bind("click", function () {
+            $(this).parents(".more").toggleClass("open");
+            var $list = $(this).parents("dd").find("li");
+            if ($(this).hasClass("moreList")) { // 더보기
+                $list.show();
+            } else { //닫기
+                $list.eq(4).nextAll().hide();
+            }
+            $(this).parent().siblings().find('button').focus();
+        });
+
+
+        // 서비스 이용안내 클릭 이벤트
+        $("div.service dt").click(function () {
+            $(this).next().toggle();
+        });
+
+        function selectPlugInUseY(idx) {
+            $('.dataSearch .searchOpt1').hide().addClass('hide');
+            $('.dataSearch .searchOpt1').eq(idx).removeClass('hide');
+            $('.dataSearch a.searchOpt1').hide();
+            $('.dataSearch .searchOpt1').selectBox('disable');
+
+            if ($("input:radio[name='st']:checked").val() == 'EXCT') {
+                $('.dataSearch .searchOpt1').hide().addClass('hide');
+                $('.dataSearch .searchOpt1').eq(1).removeClass('hide');
+                $('.dataSearch a.searchOpt1').hide();
+                $('.dataSearch .searchOpt1').selectBox('disable');
+            }
+
+            if ($("input:radio[name='st']:checked").val() == 'KWRD') {
+                $('.dataSearch a.searchOpt1').eq(0).show();
+                $('.dataSearch select.searchOpt1').eq(0).selectBox('enable');
+            } else {
+                $('.dataSearch a.searchOpt1').eq(1).show();
+                $('.dataSearch select.searchOpt1').eq(1).selectBox('enable');
+            }
+        }
+
+        function selectPlugInUseN(idx) {
+            $('.dataSearch .searchOpt1').hide();
+            $('.dataSearch .searchOpt1').eq(idx).show();
+            $('.dataSearch a.searchOpt1').hide();
+            $('.dataSearch .searchOpt1').attr('disabled', true);
+
+            if ($("input:radio[name='st']:checked").val() == 'EXCT') {
+                $('.dataSearch .searchOpt1').hide();
+                $('.dataSearch .searchOpt1').eq(1).show();
+                $('.dataSearch a.searchOpt1').hide();
+                $('.dataSearch .searchOpt1').attr('disabled', true);
+            }
+
+            if ($("input:radio[name='st']:checked").val() == 'KWRD') {
+                $('.dataSearch a.searchOpt1').eq(0).show();
+                $('.dataSearch select.searchOpt1').eq(0).attr('disabled', false);
+            } else {
+                $('.dataSearch a.searchOpt1').eq(1).show();
+                $('.dataSearch select.searchOpt1').eq(1).attr('disabled', false);
+            }
+        }
+
+
+        $("input:radio[name='st']").change(function () {
+            idx = $(this).parent().index();
+
+            if (selectPluginUseYn == 'Y') {
+                selectPlugInUseY(idx);
+            } else {
+                selectPlugInUseN(idx);
+            }
+
+            var ua = window.navigator.userAgent.toLowerCase();
+            if (/iphone/.test(ua) || /android/.test(ua) || /opera/.test(ua) || /bada/.test(ua) || /ipad/.test(ua) || /ipod/.test(ua)) {
+                if ($("input:radio[name='st']:checked").val() == 'KWRD') {
+                    $('.dataSearch .searchOpt1').eq(0).show();
+                    $('.dataSearch .searchOpt1').eq(1).hide();
+                } else {
+                    $('.dataSearch .searchOpt1').eq(1).show();
+                    $('.dataSearch .searchOpt1').eq(0).hide();
+                }
+            }
+
+        });
+
+        $("#stKWRD").attr('checked', 'checked');
+        $("#stKWRD").change();
+
+        viewBasketCount();
+
+
+        /*
+        //내바구니 담기, 내보내기, 미리보기 선택
+        $(".selectBtn a").bind("click", function() {
+            if ($(this).hasClass("previewBtn")) {
+                var $parents = $(this).parents(".items");
+                $(".preview", $parents).toggle();
+            }
+            $(this).toggleClass("selected");
+            return false;
+        });
+        */
+
+    });
+
+
+    $(window).resize(function () {
+
+        var stval = $("input:radio[name='st']:checked").val();
+
+        if (stval == 'KWRD') {
+            $('.searchSelect span').first().children().eq(0).attr('checked', 'checked');
+
+            if (selectPluginUseYn == 'Y') {
+                $('.dataSearch select.searchOpt1').eq(0).selectBox('enable');
+            } else {
+                $('.dataSearch select.searchOpt1').eq(0).show();
+            }
+
+        } else {
+            $('.searchSelect span').first().children().eq(1).attr('checked', 'checked');
+
+            if (selectPluginUseYn == 'Y') {
+                $('.dataSearch select.searchOpt1').eq(1).selectBox('enable');
+            } else {
+                $('.dataSearch select.searchOpt1').eq(1).show();
+            }
+        }
+
+        if (selectPluginUseYn == 'Y') {
+            $(".searchOpt1").selectBox('destroy').selectBox();
+            $('.dataSearch a.hide').hide();
+        }
+
+        $("#stKWRD").change();
+    });
+
+    var isUseDdsLink = false;
+    var isUseHopeBookLink = false;
+    var naverDataType = 'xml';
+    var descriptionDisplay = "Y";
+</script>
+
+<script src="/assets/js/books/common/util.js"></script>
+
+
+<script>
+    function addLinkPop(query) {
+        document.frmDigicolPopup.action = "/digicol/pop/writeitem";
+        document.frmDigicolPopup.data.value = query;
+        var options = "width=600,height=550,resizable=no,top=100,left=200,scrollbars=yes";
+        window.open('', "digicolSave", options);
+
+        document.frmDigicolPopup.target = "digicolSave";
+        document.frmDigicolPopup.submit();
+    }
+</script>
+
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.recommendList ul li a span.recommendBookTit').dotdotdot({
+            ellipsis: "..."
+        });
+    });
+
+    ;
+</script>
+</div>
+
+
 </body>
 </html>
+
+

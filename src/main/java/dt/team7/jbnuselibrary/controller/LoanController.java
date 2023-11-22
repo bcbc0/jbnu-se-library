@@ -19,8 +19,6 @@ public class LoanController {
             @RequestParam Long memberId,
             @RequestParam Long bookId
     ) {
-        System.out.println("memberId = " + memberId);
-        System.out.println("bookId = " + bookId);
         if (!loanService.borrowBook(memberId, bookId)) {
             return;
         }

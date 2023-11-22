@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
+<html class="no-js" lang="en">
 
     <head>
         <!-- meta data -->
@@ -37,13 +37,13 @@
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 		
 		<!-- bootsnav -->
-		<link rel="stylesheet" href="assets/css/bootsnav.css" >
+		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
         
         <!--style.css-->
         <link rel="stylesheet" href="assets/css/style.css">
         
         <!--responsive.css-->
-        <link rel="stylesheet" href="/assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,6 +52,11 @@
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+		
+
+		<link rel="stylesheet" type="text/css" href="assets/css/sign-in/login.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/font.css" />
+
 
     </head>
 	
@@ -113,11 +118,11 @@
 			            <!-- Collect the nav links, forms, and other content for toggling -->
 			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-			                    <li class="button"><a href="/">home</a></li>
-								<li class="button"><a href="/books/">books</a></li>
-								<li class="button"><a href="/notice">notice</a></li>
-			                    <li class="button"><a href="/donation">donation</a></li>
-			                    <li class="button"><a href="/myLibrary">my library</a></li>
+			                    <li class="button"><a href="index.html">home</a></li>
+								<li class="button"><a href="books.html">books</a></li>
+								<li class="button"><a href="notice.html">notice</a></li>
+			                    <li class="button"><a href="donation.html">donation</a></li>
+			                    <li class="button"><a href="myLibrary.html">my library</a></li>
 			                </ul><!--/.nav -->
 			            </div><!-- /.navbar-collapse -->
 			        </div><!--/.container-->
@@ -129,76 +134,80 @@
 		</section><!-- /.top-area-->
 		<!-- top-area End -->
 
-		<!--welcome-hero start -->
-		<section id="home" class="welcome-hero">
-			<div class="container">
-				<div class="welcome-hero-txt">
-					<h2>전북대학교 소프트웨어공학과 <br> 도서관 </h2>
-					<p>
-						수업명이나 첵 제목 등을 검색하세요.
-					</p>
-				</div>
+				<!-- major-area -->
 
-				<div class="welcome-hero-serch-box">
-					<div class="welcome-hero-form">
-						<div class="single-welcome-hero-form">
-							<h3>검색어</h3>
-							<form id="searchForm" action="/books/title" method="get">
-								<input id="searchInput" type="text" placeholder="Ex: 디지털공학" name="title" />
-							</form>
-						</div>
-					</div>
-					<div class="welcome-hero-serch">
-						<button class="welcome-hero-btn" onclick="submitForm()">
-							search  <i data-feather="search"></i>
-						</button>
-					</div>
-				</div>
-			</div>
+<!--topbanner-->
 
-		</section><!--/.welcome-hero-->
-		<!--welcome-hero end -->
 
-		<!--list-topics start -->
-		<section id="list-topics" class="list-topics">
-			<div class="container">
-				<div class="list-topics-content">
-					<ul>
-						<li>
-							<div class="single-list-topics-content">
-								<div class="single-list-topics-icon">
-									<i class="flaticon-travel"></i>
-								</div>
-								<h2><a href="#">또 필요한 기능</a></h2>
-								<p>설명글, 빼도됨</p>
-							</div>
-						</li>
-						<li>
-							<div class="single-list-topics-content">
-								<div class="single-list-topics-icon">
-									<i class="flaticon-building"></i>
-								</div>
-								<h2><a href="#">또 필요한 기능</a></h2>
-								<p>설명글, 빼도됨</p>
-							</div>
-						</li>
-						<li>
-							<div class="single-list-topics-content">
-								<div class="single-list-topics-icon">
-									<i class="flaticon-pills"></i>
-								</div>
-								<h2><a href="#">대출/예약 현황</a></h2>
-								<p>설명글, 빼도됨</p>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div><!--/.container-->
+<div class="loginbox">
+	<ul>
+		<li>전북대학교 홈페이지는 별도의 회원가입 절차 없이 <b>학번</b> 또는 <b>사번</b>으로 로그인 할 수 있습니다.</li>
+		<li>홈페이지 &middot; 포털 로그인 관련 문의 <b>063-270-2019</b></li>
+		<li>OASIS 로그인 관련 문의 <b>063-270-4715</b></li>
+		<li>문의가능시간: 평일 09:00 ~ 18:00</li>
+		<li>브라우저의 <b>자동로그인</b> 기능을 이용한 사용자의 경우 비밀번호 변경 후 로그인 불가시 <br /><b><a href="https://its.jbnu.ac.kr/its/9219/subview.do" target="_blank" alt="브라우저별 비밀번호 저장 기능 해제 방법"> 웹 브라우저별 [비밀번호 저장] 기능 해제 방법</a></b>을 참고하여 해제 후 이용 바랍니다. </li>
+	</ul>
+</div>
 
-		</section><!--/.list-topics-->
-		<!--list-topics end-->
+<form method="post" action="https://www.jbnu.ac.kr/kor/skin/member/login/login.php">
+<div class="loginbox2">
+	<div class="loginbox-in">
+		<div class="membertitle"><img src="assets/images/sign-in/login.png" alt="로그인"><span></span></div>
+	<div class="memberlogin">
+		<div class="membercheck">
+			<div class="memberinput"><label for="memberid">아이디</label><input type="text" placeholder="학번/사번을 입력하십시오" name="uid" value="" id="memberid" /></div>
+			<div class="memberinput"><label for="memberpw">비밀번호</label><input type="password" placeholder="비밀번호를 입력해 주세요" name="upw" id="memberpw"  autocomplete="new-password" /></div>
+			<div class="memberbtn"><input type="submit" value="로그인" title="로그인" style="background: #024287; color: #fff; border:0;font-size: 18px; font-weight: bold;" /></div>
+		</div>
+	</div>
+<div class="memberlist">
+	<div class="mlist">
+	<ul>
+		<li>2023년도 신입생 학번: 고지서 출력 후 확인 가능</li>
+		<li>신입생의 최초 비밀번호는 생년월일 6자리입니다.</li>
+		<li>메인홈페이지, 전북대포털, 오아시스, 도서관 동일 </li>
+	</ul>
+	<div class="memberpoliy">
+<!-- 				<div class="mpolicybtn"><a href="https://all.jbnu.ac.kr/PswrdSrch.html" target="_blank">비밀번호찾기/포털사용동의</a></div> -->
+		<div class="mpolicybtn"><a href="https://oasis.jbnu.ac.kr/com/Search_Pwd.do" target="_blank">아이디/비밀번호 찾기</a></div>
+		<div class="mpoliytxt">비밀번호 변경은 오아시스 로그인 후 가능</div>
+	</div>
+	</div>
+</div>
+</div>
+<input type="hidden" name="backUrl" value="">
+<input type="hidden" name="menuID" value="5">
+</form>
+
+
+
+
+		</div>
+		<!--
+		<div class="scbox">
+			<ul>
+				<li class="sc1"><span>담당부서_</span>홍보팀</li>
+				<li class="sc2"><span>담당_</span>홍길동</li>
+				<li class="sc3"><span>전화번호_</span>063-281-5020</li>
+			</ul>
+		</div>
+		 -->
 
 		
+
+	</div>
+	<!--/subcon/-->
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+		
+
+		<!-- major-area End-->
 
 		<!--footer start-->
 		<footer id="footer"  class="footer">
@@ -212,11 +221,11 @@
 						</div>
 						<div class="col-sm-9">
 							<ul class="footer-menu-item">
-							 <li class="button"><a href="/">home</a></li>
-							 <li class="button"><a href="/books/">books</a></li>
-							 <li class="button"><a href="/notice">notice</a></li>
-							 <li class="button"><a href="/donation">donation</a></li>
-							 <li class="button"><a href="/myLibrary">my library</a></li>
+							 <li class="button"><a href="index.html">home</a></li>
+							 <li class="button"><a href="books.html">books</a></li>
+							 <li class="button"><a href="notice.html">notice</a></li>
+							 <li class="button"><a href="donation.html">donation</a></li>
+							 <li class="button"><a href="myLibrary.html">my library</a></li>
 						 </ul><!--/.nav -->
 						</div>
 		           </div>
@@ -279,13 +288,6 @@
 		     
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
-
-		<script>
-			function submitForm() {
-				// 폼을 제출
-				document.getElementById("searchForm").submit();
-			}
-		</script>
         
     </body>
 	

@@ -1,0 +1,82 @@
+@charset "utf-8";
+@media screen and (min-width:768px) and (max-width:1024px){
+#divContentsW {/* padding:0 20px 40px 20px */}
+#divContents {width:100%;padding:0}
+}
+@media screen and (min-width:0px) and (max-width:767px){
+#divContentsW {width:100%}
+}
+.basketHeader {position:relative;overflow:hidden;padding:10px 15px;border-top:1px solid #b3b3b3;background:#eee}
+.basketHeader p {position:absolute;left:15px;top: 15px;}
+.basketHeader p input {width:13px;height:13px}
+.fileSend {float:right;padding:0 10px;background:#fff;border:1px solid #ccc}
+.fileSend a {display:block;padding:0 17px 0 0;background:url(../../../../image/ko/solution/common/ico/send.gif) no-repeat 100% 50%;line-height:2.3em}
+
+.basketList {clear:both;width:100%}
+.basketList li {position:relative;overflow:hidden;padding:16px 15px 13px 105px;border-bottom:1px solid #e6e6e6}
+.basketList p {position:absolute;left:0;top:18px}
+.basketList p .num {display:inline-block;margin-left:48px}
+.basketList p input {position:absolute;left:15px;top:2px;width:13px;height:13px}
+.basketList dl {width:100%}
+.basketList dt {display:none}
+.basketList dd {float:left;min-height:21px;padding-left:9px;margin:0 0 3px 3px;background:url(../../../../image/ko/solution/common/bg/lineSlash.png) no-repeat 0 center;line-height:21px}
+.basketList dd.title {position:relative;padding:0;margin-left:0;background:none;font-weight:bold}
+.basketList dd.title a {color:#4d4d4d}
+.basketList dd.title img {margin-left:-27px;margin-right:10px;vertical-align:middle}
+
+@media screen and (min-width:0px) and (max-width:767px){
+.basketList p .num {color:#1a1a1a}
+}
+
+/* 내보내기 */
+.export {display:none;position:absolute;top: 150px;right:0;width:452px;padding-top:11px;line-height:1;z-index:21;}
+.exportForm {padding:29px 30px 40px 30px;background:#fff;border:1px solid #c6c6c6;}
+.export h3 {float:none;padding:0 0 20px 35px;border-bottom:1px solid #003777;background:url(../../../../image/ko/solution/common/ico/sendFormIco.png) no-repeat;margin-bottom:20px;font-size:25px;color:#003777}
+.export dt {margin-bottom:15px;color:#1a1a1a}
+.export dd {margin-bottom:20px}
+.export .exportType {margin-bottom:27px}
+.exportType ul {overflow:hidden}
+.exportType li {position:relative;float:left;width:48px;height:78px;margin-left:20px;text-align:center}
+.exportType li:first-child {margin-left:0}
+.exportType label {display:block;width:48px;height:55px;text-indent:-9999em}
+.exportType input {position:absolute;bottom:0;left:50%;margin-left:-7px}
+.exportType .exportHtml label {background:url(../../../../image/ko/solution/common/ico/html.png) no-repeat;}
+.exportType .exportMail label {background:url(../../../../image/ko/solution/common/ico/email.png) no-repeat;}
+.exportType .exportPrint label {background:url(../../../../image/ko/solution/common/ico/print.png) no-repeat;}
+.exportType .exportPreview label {background:url(../../../../image/ko/solution/common/ico/preview.png) no-repeat;}
+.exportType .exportEndNote label {background:url(../../../../image/ko/solution/common/ico/endNote.png) no-repeat;}
+.exportType .exportRefWorks label {background:url(../../../../image/ko/solution/common/ico/refWorks.png) no-repeat;}
+.range ul {overflow:hidden}
+.range li {float:left;width:50%;margin-bottom:10px}
+.range input {vertical-align:-2px}
+.export .mail {display:none}
+.export .mail dt {display:inline-block; margin-bottom:0;width: 55px;height: 33px}
+.export .mail dt label {display:inline-block;}
+.export .mail dd {display:inline-block; margin-bottom:10px}
+.export .mail input {width:308px}
+.export .buttons {margin-top:10px}
+.export .notice {display:none;margin-bottom:40px}
+
+@media screen and (min-width:768px) and (max-width:1024px){
+	.export {top:183px}
+}
+
+@media screen and (min-width:0px) and (max-width:767px){
+.basketHeader {margin-top:20px;}
+.basketHeader p {position:inherit;left:15px;top:0;}
+.export {top:183px;width:300px}
+.exportForm {padding:14px 20px 20px}
+.export h3 {padding:0 0 10px 0;background:none;font-size:18px}
+.export dt {margin-bottom:10px}
+.export dd {margin-bottom:10px}
+.export .exportRange {margin-bottom:10px}
+.export .exportType {padding-bottom:10px;margin-bottom:20px;border-bottom:1px solid #b3b3b3}
+.export .exportType li {position:relative;float:left;width:50%;height:auto;margin-left:0;margin-bottom:10px;text-align:left}
+.export .exportType label {display:inline;width:auto;height:auto;background:none !important;text-indent:0}
+.export .exportType input {position:relative;bottom:0;left:0;margin-left:0;vertical-align:-2px}
+.export .exportMail dd {margin-bottom:20px}
+.export .exportMail input {padding:0 5px}
+.export input.inputTextType1{width:257px}
+.export .buttons {margin-top:0}
+.export .notice {margin-bottom:20px}
+}
