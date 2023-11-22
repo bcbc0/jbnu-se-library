@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* 이화여대 추천도서(이대 전용) */
+.recommendList{margin-top:50px;}
+.recommendList .listTit{margin-bottom:8px;color:#00427d;font-size:18px}
+.recommendList .preface{margin-bottom:18px;color:#5d5d5d;font-size:13px}
+.recommendList > div{position:relative;padding-bottom:160px;background: url(../../../../image/ko/solution/local/recommendListBg.png) repeat-y 50% 17px #f2f2f2;overflow:hidden;padding-left: 88px;padding-right: 88px;}
+.recommendList ul li{float:left;width:20%;height:271px;text-align:center}
+.recommendList ul li a{position:relative;display:inline-block;width: 110px;margin-top:63px;}
+.recommendList ul li a span.lineBg{position:absolute;top:0;left:0;width: 155px;height: 150px;background: url(../../../../image/ko/solution/common/bg/bookGuide.png) no-repeat 0 0;}
+.recommendList ul li a img{vertical-align:bottom;width: 110px;height: 150px;}
+.recommendList ul li a span.recommendBookTit{display:block;height:52px; width: 113px; margin-top:30px;color:#565656;font-size:14px; line-height: 18px; text-align:left;overflow:hidden}
+.recommendList ul li a:hover span.recommendBookTit{}
+.recommendList .more{position:absolute;bottom:17px;right:14px;height:38px;padding:0 20px;background-color:#a7265c;border:1px solid #a7265c; color:#fff;font-size:15px;line-height:38px}
+
+.recommendList .bookInfo {display:none;position:relative;top:-90px;width:356px;padding:8px 0 0 0;text-align:left;color:#1a1a1a;z-index:100}
+.recommendList li > div:hover .bookInfo, .recommendList li > div > a:focus + .bookInfo {display:block}
+.recommendList .bookInfoL {left:50px;background:url(../../../../image/ko/solution/common/bg/myBookInfoBgL.png) no-repeat}
+.recommendList .bookInfoR {left:-209px;background:url(../../../../image/ko/solution/common/bg/myBookInfoBgR.png) no-repeat right top}
+.recommendList .bookInfo h4, .recommendList .bookInfo dl {padding-left:20px;background:#fff;border-left:1px solid #999;border-right:1px solid #999;}
+.recommendList .bookInfo h4 {padding:19px 20px 12px 20px; font-size: 16px; font-weight: 600;}
+.recommendList .bookInfo dl {padding-bottom:10px;border-bottom:1px solid #999;}
+.recommendList .bookInfo dt {float:left;width:60px;color:#1a1a1a}
+.recommendList .bookInfo dd {margin-bottom:6px}
+.recommendList .bookInfo .type {position:relative;top:-2px;height:17px;padding:2px 0 0 0;margin:0 0 3px 60px}
+.recommendList .bookInfo .type img{vertical-align:middle;margin-right:5px}
+
+/* 태블릿 */
+@media screen and (min-width:768px) and (max-width:1024px){
+	.recommendList > div{padding-left: 0; padding-right: 0;}
+	.recommendList li > div:hover .bookInfo {display:none}
+}
+
+/* 모바일 */
+@media screen and (min-width:0px) and (max-width:767px){
+	.recommendList > div{padding-left: 0; padding-right: 0;}
+	.recommendList ul li{width:50%}
+	.recommendList li > div:hover .bookInfo {display:none}
+}
