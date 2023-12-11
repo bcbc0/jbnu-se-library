@@ -134,11 +134,11 @@
 			            <!-- Collect the nav links, forms, and other content for toggling -->
 			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-			                    <li class="button"><a href="index.html">home</a></li>
-								<li class="button"><a href="books.html">books</a></li>
-								<li class="button"><a href="notice.html">notice</a></li>
-			                    <li class="button"><a href="donation.html">donation</a></li>
-			                    <li class="button"><a href="myLibrary.html">my library</a></li>
+								<li class="button"><a href="/">home</a></li>
+								<li class="button"><a href="/books/">books</a></li>
+								<li class="button"><a href="/notice">notice</a></li>
+								<li class="button"><a href="/donation">donation</a></li>
+								<li class="button"><a href="/myLibrary">my library</a></li>
 			                </ul><!--/.nav -->
 			            </div><!-- /.navbar-collapse -->
 			        </div><!--/.container-->
@@ -151,46 +151,6 @@
 		<!-- top-area End -->
 
 		<!-- major-area -->
-        <h3 class="skip">전체 대출 기록</h3>
-	
-	    <div class="searchArea">
-		    <form id="form" name="form" action="/myloan/history" method="get">
-		    <input type="hidden" name="pn" value="1">
-		    <fieldset>
-			    <span class="bunch">
-			    <label for="si" class="skip">검색</label>
-			    <select id="si" name="si" class="selectBox1" title="검색항목">
-				    <option value="title">서명</option>
-				    <option value="author">저자</option>
-			    </select>
-			    <label for="sw" class="skip">검색어</label>
-			    <input id="sw" name="sw" class="inputTextType6 sw" title="검색어를 입력하세요" type="text" value="" maxlength="100" placeHolder="검색어를 입력하세요"/>
-			    </span>
-			    <span class="bunch">
-				    <label for="dtf" class="skip">대출일(시작)</label>
-				    <input type="text" id="dtf" name="dtf" maxlength="8" class="datePicker" onkeyup="javascript:validate('dtf')" placeholder="대출일(시작)"/>&nbsp;~&nbsp;
-				    <label for="dtt" class="skip">대출일(끝)</label>
-				    <input type="text" id="dtt" name="dtt" maxlength="8" class="datePicker" onkeyup="javascript:validate('dtt')" placeholder="대출일(끝)"/>
-			    </span>
-			    <span class="bunch">
-				    <label for="oi" class="skip">정렬항목</label>
-				    <select id="oi" name="oi" class="selectBox1" title="정렬항목">
-    					<option value="">정렬항목</option>
-    					<option value="title">서명</option>
-					    <option value="author">저자</option>
-					    <option value="loan_date">대출일</option>
-				    </select>
-				    <label for="os" class="skip">정렬순서</label>
-				    <select id="os" name="os" class="selectBox1" title="정렬순서">
-    					<option value="">정렬순서</option>
-					    <option value="asc">오름차순</option>
-					    <option value="desc">내림차순</option>
-				    </select>
-			    </span>
-			    <input type="submit" value="조회" class="btnType5">
-		    </fieldset>
-		    </form>
-	    </div>
 	    <div class="listTable">
     		<table class="mobileTable">
 			    <caption>전체 대출 기록</caption>
@@ -198,203 +158,28 @@
     				<tr>
 					    <th scope="row">No.</th>
 					    <th scope="row">서명/저자</th>
-					    <th scope="row" data-hide="phone">소장처/자료실</th>
-					    <th scope="row" data-hide="phone">등록번호</th>
 					    <th scope="row" data-hide="phone">대출일</th>
 					    <th scope="row" data-class="expand">반납일</th>
-					    <th scope="row" data-hide="phone">반납유형</th>
+					    <th scope="row" data-hide="phone">반납</th>
 			  	    </tr>
 			    </thead>
 			    <tbody>
-				
-				
-				
-				
-				<tr>
-					<td class="num">1</td>
-					
-					   
-					   
-							<td class="title"><a href="/search/detail/CATTOT000000914370">모두의 자바 : 하루 30분, 쉽게 배우는 자바 프로그래밍/강경미</a></td>
-					   
-					
-					
-					
-					
-					
-					
-						<td class="location">중앙도서관</td>
-					
-					
-						
-					<td class="accession_no">E1176098</td>
-					<td class="loan_date">2023-03-07</td>
-					<td class="return_date">2023-09-14</td>
-					<td class="return_type">연체반납</td>
-				</tr>
-				
-				
-				
-				<tr>
-					<td class="num">2</td>
-					
-					   
-					   
-							<td class="title"><a href="/search/detail/CATTOT000000843928">(어서와) Java는 처음이지!/천인국</a></td>
-					   
-					
-					
-					
-					
-					
-					
-						<td class="location">중앙도서관</td>
-					
-					
-						
-					<td class="accession_no">E1081774</td>
-					<td class="loan_date">2023-03-07</td>
-					<td class="return_date">2023-09-14</td>
-					<td class="return_type">연체반납</td>
-				</tr>
-				
-				
-				
-				<tr>
-					<td class="num">3</td>
-					
-					   
-					   
-							<td class="title"><a href="/search/detail/CATTOT000000905076">(예제로 쉽게 배우는) 아두이노 / 제2판/장성용</a></td>
-					   
-					
-					
-					
-					
-					
-					
-						<td class="location">중앙도서관</td>
-					
-					
-						
-					<td class="accession_no">E1163925</td>
-					<td class="loan_date">2023-03-07</td>
-					<td class="return_date">2023-06-27</td>
-					<td class="return_type">연체반납</td>
-				</tr>
-				
-				
-				
-				<tr>
-					<td class="num">4</td>
-					
-					   
-					   
-							<td class="title"><a href="/search/detail/CATTOT000000905010">(공학인증을 위한) 확률과 통계 / 제4판/이재원</a></td>
-					   
-					
-					
-					
-					
-					
-					
-						<td class="location">중앙도서관</td>
-					
-					
-						
-					<td class="accession_no">E1163719</td>
-					<td class="loan_date">2023-03-07</td>
-					<td class="return_date">2023-06-27</td>
-					<td class="return_type">연체반납</td>
-				</tr>
-				
-				
-				
-				<tr>
-					<td class="num">5</td>
-					
-					   
-					   
-							<td class="title"><a href="/search/detail/CATTOT000000905102">(컴퓨팅 사고력을 키우는) 이산수학 / 개정판[실은 2판]/박주미</a></td>
-					   
-					
-					
-					
-					
-					
-					
-						<td class="location">중앙도서관</td>
-					
-					
-						
-					<td class="accession_no">E1163952</td>
-					<td class="loan_date">2023-03-07</td>
-					<td class="return_date">2023-06-07</td>
-					<td class="return_type">연체반납</td>
-				</tr>
-				
-				
-				
-				<tr>
-					<td class="num">6</td>
-					
-					   
-					   
-							<td class="title"><a href="/search/detail/CATTOT000000904911">객체지향 소프트웨어 공학 : 객체지향 소프트웨어 개발의 모든 것/최은만</a></td>
-					   
-					
-					
-					
-					
-					
-					
-						<td class="location">중앙도서관</td>
-					
-					
-						
-					<td class="accession_no">E1163692</td>
-					<td class="loan_date">2023-03-07</td>
-					<td class="return_date">2023-03-24</td>
-					<td class="return_type">연체반납</td>
-				</tr>
-				
-				
-				
-				<tr>
-					<td class="num">7</td>
-					
-					   
-					   
-							<td class="title"><a href="/search/detail/CATTOT000000941057">(만들면서 배우는) 아두이노 IoT 사물인터넷과 40개의 작품들/장문철</a></td>
-					   
-					
-					
-					
-					
-					
-					
-						<td class="location">중앙도서관</td>
-					
-					
-						
-					<td class="accession_no">E1209956</td>
-					<td class="loan_date">2023-03-07</td>
-					<td class="return_date">2023-03-21</td>
-					<td class="return_type">정상반납</td>
-				</tr>
-				
-				
+
+					<tr th:each="loanHistory, stat : ${loanHistories}">
+						<td class="num" th:text="${stat.index + 1}"></td>
+						<td class="title" th:text="${loanHistory.book.title}"></td>
+						<td class="loan_date" th:text="${loanHistory.borrowDate}"></td>
+						<td class="return_date" th:text="${loanHistory.returnDate}"></td>
+						<td>
+							<a th:href="@{/loan/return/{bookId}(bookId=${loanHistory.id})}" th:id="'customButton_' + ${loanHistory.book.id}" href="#" class="returnBtn" title="반납">
+								반납
+							</a>
+						</td>
+					</tr>
 				
 			</tbody>
 		</table>
 	</div>
-
-
-
-
-
-		
-
 		<!-- major-area End-->
 
 		<!--footer start-->
@@ -409,11 +194,11 @@
 						</div>
 						<div class="col-sm-9">
 							<ul class="footer-menu-item">
-							 <li class="button"><a href="index.html">home</a></li>
-							 <li class="button"><a href="books.html">books</a></li>
-							 <li class="button"><a href="notice.html">notice</a></li>
-							 <li class="button"><a href="donation.html">donation</a></li>
-							 <li class="button"><a href="myLibrary.html">my library</a></li>
+								<li class="button"><a href="/">home</a></li>
+								<li class="button"><a href="/books/">books</a></li>
+								<li class="button"><a href="/notice">notice</a></li>
+								<li class="button"><a href="/donation">donation</a></li>
+								<li class="button"><a href="/myLibrary">my library</a></li>
 						 </ul><!--/.nav -->
 						</div>
 		           </div>

@@ -11,7 +11,7 @@ public interface LoanService {
 
     List<LoanHistory> getLoanHistoriesByMemberIdAndBookId(Long memberId, Long bookId);
 
-    Boolean borrowBook(Long memberId, Long bookId);
+    Boolean borrowBook(Long bookId);
 
-    void returnBook(Long memberId, Long bookId);
+    void returnBook(Long bookId);
 }

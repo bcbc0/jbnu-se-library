@@ -1,37 +1,33 @@
 package dt.team7.jbnuselibrary.controller;
 
-import dt.team7.jbnuselibrary.service.BookService;
 import dt.team7.jbnuselibrary.service.LoanService;
-import dt.team7.jbnuselibrary.service.MemberService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 
-@RestController
+@Controller
 @RequestMapping("/loan")
 @RequiredArgsConstructor
 public class LoanController {
 
     private final LoanService loanService;
 
-    @PostMapping("/borrow")
-    public void borrowBook(
-            @RequestParam Long memberId,
-            @RequestParam Long bookId
-    ) {
-        if (!loanService.borrowBook(memberId, bookId)) {
-            return;
+    @GetMapping("/borrow/{bookId}")
+    public String borrowBook(@PathVariable Long bookId, Model model) {
+        if (loanService.borrowBook(bookId)) {
+            return "redirect:/books/";
         }
+        return "redirect:/";
 
     }
 
-    @PostMapping("/return")
-    public void returnBook(
-            @RequestParam Long memberId,
-            @RequestParam Long bookId
-    ) {
-        loanService.returnBook(memberId, bookId);
+    @GetMapping("/return/{loanId}")
+    public String returnBook(@PathVariable Long loanId, Model model) {
+        loanService.returnBook(loanId);
+        return "redirect:/";
     }
-
-
 }

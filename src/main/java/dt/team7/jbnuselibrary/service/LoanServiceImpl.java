@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -42,8 +42,7 @@ public class LoanServiceImpl implements LoanService {
 
     @Override
     @Transactional
-    public Boolean borrowBook(Long memberId, Long bookId) {
-        Member member = memberRepository.findById(memberId).orElse(null);
+    public Boolean borrowBook(Long bookId) {
         Book book = bookRepository.findById(bookId).orElse(null);
 
         assert book != null;
@@ -54,9 +53,9 @@ public class LoanServiceImpl implements LoanService {
         book.increaseBorrowedCount();
 
         LoanHistory loanHistory = LoanHistory.builder()
-                .member(member)
                 .book(book)
-                .borrowDate(LocalDateTime.now())
+                .borrowDate(LocalDate.now())
+                .returnDate(LocalDate.now().plusMonths(6))
                 .build();
 
         loanRepository.save(loanHistory);
@@ -66,10 +65,11 @@ public class LoanServiceImpl implements LoanService {
 
     @Override
     @Transactional
-    public void returnBook(Long memberId, Long bookId) {
-        Member member = memberRepository.findById(memberId).orElse(null);
-        Book book = bookRepository.findById(bookId).orElse(null);
-
+    public void returnBook(Long loanId) {
+        LoanHistory loanHistory = loanRepository.findById(loanId).orElse(null);
+        assert loanHistory != null;
+        Book book = bookRepository.findById(loanHistory.getBook().getId()).orElse(null);
+        loanRepository.delete(loanHistory);
         assert book != null;
         book.decreaseBorrowedCount();
     }

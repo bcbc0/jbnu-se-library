@@ -4,7 +4,6 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -26,6 +25,6 @@ public class LoanHistory {
     @JoinColumn(name = "book_id")
     private Book book;
 
-    private LocalDateTime borrowDate;
-    private LocalDateTime returnDate;
+    private LocalDate borrowDate;
+    private LocalDate returnDate;
 }

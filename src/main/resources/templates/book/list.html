@@ -443,10 +443,11 @@
                     </a>
 `
                     <p class="selectBtn">
-                        <a th:id="'basket_' + ${book.id}" href="/loan/borrow" class="cartBtn " title="대출하기">
+                        <a th:href="@{/loan/borrow/{bookId}(bookId=${book.id})}" th:id="'basket_' + ${book.id}" href="#" class="cartBtn" title="대출하기">
                             대출
                         </a>
                     </p>
+
                 </dd>
 
 
@@ -898,7 +899,7 @@
         });
     });
 
-    ;
+
 </script>
 </div>
 
